@@ -42,6 +42,7 @@ body,
 }
 .body-wrap {
   height: calc(100% - 140px);
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
