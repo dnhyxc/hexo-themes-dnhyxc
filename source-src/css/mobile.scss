@@ -27,6 +27,7 @@ body,
     position: relative;
   }
 }
+
 .wrap-side-operation {
   display: none;
 }
@@ -177,7 +178,7 @@ body,
     margin: 0;
   }
   .article-entry {
-    padding: 10px 0 30px 0;
+    // padding: 10px 0 30px 0;
   }
   .article-inner h1.article-title,
   .article-title {
@@ -312,14 +313,35 @@ body,
 }
 
 #footer {
+  // border: 1px solid red;
+  // position: relative;
+  // bottom: 0;
+
+  // .footer-left {
+  //   float: left;
+  //   margin-bottom: 10px;
+  // }
+  // .footer-right {
+  //   float: initial;
+  // }
   position: relative;
   bottom: 0;
-  .footer-left {
-    float: initial;
-    margin-bottom: 10px;
-  }
-  .footer-right {
-    float: initial;
+
+  .outer {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: 0%;
+    box-shadow: none;
+
+    #footer-info {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
 

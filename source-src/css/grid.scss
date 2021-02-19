@@ -41,14 +41,13 @@ body,
   }
 }
 .body-wrap {
-  height: calc(100% - 95px);
+  height: calc(100% - 140px);
   overflow-y: auto;
 }
 
 .artWrap {
   width: 100%;
-  height: calc(100% - 55px);
-  margin-bottom: 45px;
+  height: 100%;
 }
 
 .mid-col {
@@ -82,10 +81,11 @@ body,
   .main {
     height: 50px;
     line-height: 50px;
-    margin: 10px 10px 0 10px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #ccc inset;
-    font-size: 20px;
+    margin: 10px 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 5px 10px #ccc inset;
+    font-size: 18px;
     font-weight: 700;
     text-align: center;
     color: #ffd900;
