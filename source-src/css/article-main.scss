@@ -91,19 +91,22 @@
 }
 
 .article-header {
+  position: relative;
   box-sizing: border-box;
   border-left: 8px solid rgb(255, 217, 0);
   padding: 30px 0px 15px 10px;
   padding-left: calc(7.6923% - 8px);
   border-top-left-radius: 30px;
-  // border: 1px solid red;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
+}
+
+.time-count {
+  position: absolute;
+  top: 32px;
+  right: 7.6923%;
 }
 
 .archive-article-date {
-  padding-right: 4px;
+  // padding-right: 4px;
 }
 
 .article-meta {
