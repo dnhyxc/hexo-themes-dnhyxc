@@ -147,17 +147,17 @@
   .tooltip-content {
     position: absolute;
     z-index: 9999;
-    width: 341px;
+    width: 300px;
     left: 50%;
     bottom: 100%;
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 16px;
+    line-height: 1;
     text-align: center;
     font-weight: 400;
     color: #4d4d4d;
     background: transparent;
     opacity: 0;
-    margin: 0 0 -10px -171px;
+    margin: 0 0 -6px -150px;
     cursor: default;
     pointer-events: none;
     font-family: "Satisfy", cursive;
@@ -196,7 +196,7 @@
 
   .tooltip-inner {
     background: rgba(36, 193, 246, 0.9);
-    padding: 40px;
+    padding: 30px;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
     webkit-transition: -webkit-transform 0.3s;

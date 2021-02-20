@@ -38,16 +38,31 @@
       color: #ddd;
     }
   }
+
+  .reward-box-item {
+    margin-top: 10px;
+  }
+
   .reward-type {
     font-size: 16px;
     display: block;
-    color: #4d4d4d;
-    margin: 20px 0 0 0;
+    color: #fff;
+    margin-top: 10px;
   }
-  .reward-img {
-    width: 130px;
-    height: 130px;
-    border: 6px solid #fff;
+  .alipay {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
     border-radius: 3px;
+    background: url(./img/alipay.jpg);
+    background-size: 100% 100%;
+  }
+  .wechat {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    background: url(./img/wechat.jpg);
+    background-size: 100% 100%;
   }
 }
