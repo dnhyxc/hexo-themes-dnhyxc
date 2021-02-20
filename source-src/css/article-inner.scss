@@ -210,12 +210,14 @@
     }
     thead {
       tr {
-        background: #f8f8f8;
+        width: 100%;
+        background: #3b3b3b;
       }
     }
     tbody {
       tr:hover {
-        background: #efefef;
+        background: #cff18f;
+        color: black;
       }
     }
     td,
