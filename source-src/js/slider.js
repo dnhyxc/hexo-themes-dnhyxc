@@ -428,7 +428,7 @@ function init() {
 	})
 
 	if (path.includes('tags')) {
-		main.innerHTML = '随 笔';
+		main.innerHTML = 'Informal Essay';
 	}
 
 	// 函数节流
