@@ -37,14 +37,12 @@
   }
 
   /* Tooltip */
-
   .tooltip-content {
+    height: 320px;
     position: absolute;
-    background: rgba(36, 193, 246, 0.9);
+    background: #666;
     z-index: 9999;
-    width: 200px;
-    bottom: 50%;
-    margin-bottom: -10px;
+    width: 220px;
     border-radius: 20px;
     font-size: 1.1em;
     text-align: center;
@@ -81,7 +79,6 @@
   }
 
   /* Gap "bridge" and arrow */
-
   .tooltip-content::before,
   .tooltip-content::after {
     content: "";
@@ -142,31 +139,6 @@
     pointer-events: auto;
   }
 
-  /* Tooltip */
-
-  .tooltip-content {
-    position: absolute;
-    z-index: 9999;
-    width: 300px;
-    left: 50%;
-    bottom: 100%;
-    font-size: 16px;
-    line-height: 1;
-    text-align: center;
-    font-weight: 400;
-    color: #4d4d4d;
-    background: transparent;
-    opacity: 0;
-    margin: 0 0 -6px -150px;
-    cursor: default;
-    pointer-events: none;
-    font-family: "Satisfy", cursive;
-    -webkit-font-smoothing: antialiased;
-    -webkit-transition: opacity 0.3s 0.3s;
-    transition: opacity 0.3s 0.3s;
-    padding-bottom: 25px;
-  }
-
   .tooltip:hover .tooltip-content {
     opacity: 1;
     pointer-events: auto;
@@ -211,7 +183,6 @@
   }
 
   /* Arrow */
-
   .tooltip-content::after {
     content: "";
     left: 50%;
