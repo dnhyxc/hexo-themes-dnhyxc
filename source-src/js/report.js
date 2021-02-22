@@ -18,7 +18,7 @@ if (window.BJ_REPORT) {
 		combo: 0,
 		delay: 1000,
 		// url: "//litten.me:9005/badjs/",
-		url: `//${pageContext.request.contextPath}/badjs/`,
+		url: "[http://127.0.0.1:80/badjs](http://127.0.0.1/badjs)",
 		ignore: [/Script error/i],
 		random: 1,
 		repeat: 500000,
