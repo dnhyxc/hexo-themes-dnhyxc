@@ -30,8 +30,8 @@
 .toc-container {
   position: relative;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   opacity: 0.8;
 }
 .jump-plan-container {
@@ -78,26 +78,25 @@
     background: #666;
   }
   .icon-font {
-    font-size: 22px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 30px;
     color: #fff;
   }
   .tooltip {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     top: 0;
     left: 0;
   }
   .tooltip-east .tooltip-content {
-    max-height: 320px;
+    // max-height: 320px;
     text-align: left;
     padding: 10px 10px;
-    right: 4.7em;
+    right: 3.9em;
     max-width: 220px;
     width: initial;
     font-size: 14px;
     text-shadow: 1px 1px 1px #398199;
-    // bottom: -10px;
     transform-origin: 100% 100%;
     transform: translate3d(0, -10px, 0) rotate3d(1, 1, 1, -30deg);
     a {
@@ -120,7 +119,6 @@
     }
   }
   .tooltip:hover .tooltip-content {
-    // bottom: -10px;
     transform: translate(0);
   }
 }
