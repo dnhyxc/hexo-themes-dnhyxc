@@ -10,11 +10,11 @@ tagcloud: true
 
 # SubNav
 subnav:
-  juejin: "#"
+  juejin: "https://juejin.cn/user/4265760848885368"
   github: "https://github.com/dnhyxc"
   # weibo: "#"
   # rss: "#"
-  zhihu: "#"
+  zhihu: "https://www.zhihu.com/people/xia-mo-65-57-25"
   #qq: "#"
   #weixin: "#"
   #jianshu: "#"
@@ -142,3 +142,13 @@ canvas_nest: true
 
 busuanzi:
   enable: true
+
+# Valine https://valine.js.org
+valine:
+  appid: k8iXy6BCJ5fbB1TB8DbrUPr9-gzGzoHsz
+  appkey: VszAhjmXdkoNUDRyO0URdndV
+  verify: false #验证码，verify和notify这两个最好就别动了
+  notify: false #评论回复提醒
+  avatar: https://avatars.githubusercontent.com/u/57223903?s=460&u=6af037d861ac65ffc7916d60edbe0c541d1cc9d3&v=4 #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  # avatar: mm #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: Just go go #评论框占位符

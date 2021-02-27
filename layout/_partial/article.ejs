@@ -136,3 +136,51 @@
     }) %>
 <% } %>
 <% } %>
+
+<% if (!index){ %>
+<% if (theme.valine && theme.valine.appid && theme.valine.appkey){ %>
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #212121
+    }
+
+    .vcontent p {
+      color: #f5edc6 !important;
+    }
+
+    .v[data-class=v] .vcards .vcard .vimg {
+      border: none !important;
+    }
+
+    .v[data-class=v] .veditor {
+      color: #ccc;
+    }
+
+    .v[data-class=v] .vbtn {
+      background-color: rgba(225, 225, 225, 0.1);
+      box-shadow: 0 0 10px black;
+      border: none;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #212121
+      }
+    }
+
+  </style>
+  <%- partial('post/valine', {
+	        key: post.slug,
+	        title: post.title,
+	        url: config.url+url_for(post.path)
+	        }) %>
+</section>
+<% } %>
+<% } %>

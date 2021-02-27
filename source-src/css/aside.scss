@@ -1,6 +1,6 @@
 .wrap-side-operation {
   position: fixed;
-  right: 40px;
+  right: 39px;
   top: 18px;
   z-index: 999;
   font-size: 14px;
@@ -17,7 +17,7 @@
 }
 .mod-side-operation {
   box-sizing: border-box;
-  width: 118px;
+  width: 35px;
   text-align: center;
   // line-height: 35px;
   vertical-align: middle;
@@ -33,7 +33,7 @@
 .toc-container {
   position: relative;
   cursor: pointer;
-  width: 118px;
+  width: 35px;
   height: 35px;
   opacity: 0.8;
 }
@@ -72,11 +72,18 @@
 }
 
 .toc-container.tooltip-left {
+  background-color: #292929;
+  box-shadow: 0 0 10px black;
   box-sizing: border-box;
   border-radius: 35px;
   transition: 0.3s;
+  cursor: pointer;
   &:hover {
-    color: gold;
+    color: #d9ff00;
+    box-shadow: 0 0 12px #ccc inset;
+    .icon-font {
+      color: #d9ff00;
+    }
   }
   .icon-font {
     font-size: 20px;
@@ -101,7 +108,7 @@
     // max-height: 320px;
     text-align: left;
     padding: 10px 10px;
-    right: 11em;
+    right: 4.4em;
     max-width: 220px;
     width: initial;
     font-size: 14px;
@@ -116,7 +123,7 @@
       top: 30px;
     }
     .toc-article {
-      max-height: 300px;
+      max-height: 500px;
       max-width: 200px;
       overflow: auto;
     }

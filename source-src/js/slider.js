@@ -23,13 +23,18 @@ let btnctnName = document.querySelector('.btnctn-name');
 let main = document.querySelector('.main');
 let bodyScroll = document.body;
 
-homeIcon.onmouseover = function () {
+homeIcon.onclick = function (e) {
+	e.stopPropagation();
+	if (tipsBox.classList.value === 'tips-box') {
+		tipsBox.classList.add("tip-show");
+	} else {
+		tipsBox.classList.remove("tip-show");
+	}
+}
+homeIcon.onmouseover = function (e) {
 	tipsBox.classList.add("tip-show");
 }
 leftCol.onclick = function () {
-	tipsBox.classList.remove("tip-show");
-}
-homeIcon.onclick = function () {
 	tipsBox.classList.remove("tip-show");
 }
 tipsAs.forEach(i => {
@@ -37,6 +42,24 @@ tipsAs.forEach(i => {
 		tipsBox.classList.remove("tip-show");
 	}
 })
+
+// 函数节流
+var canRun = true;
+bodyScroll.onscroll = function () {
+	if (!canRun) return;
+	canRun = false;
+	setTimeout(function () {
+		let eleScrollTop = document.documentElement.scrollTop;
+		if (eleScrollTop !== 0) {
+			btnctn.classList.add('btnScroll');
+			btnctnName.style.display = 'block';
+		} else {
+			btnctn.classList.remove('btnScroll');
+			btnctnName.style.display = 'none';
+		}
+		canRun = true;
+	}, 100);
+};
 
 if (path) {
 	main.innerHTML = 'Informal Essay';
@@ -235,24 +258,6 @@ function init() {
 			return false
 		}
 	}
-
-	// 函数节流
-	var canRun = true;
-	bodyScroll.onscroll = function () {
-		if (!canRun) return;
-		canRun = false;
-		setTimeout(function () {
-			let eleScrollTop = document.documentElement.scrollTop;
-			if (eleScrollTop >= atthorName.offsetTop) {
-				btnctn.classList.add('btnScroll');
-				btnctnName.style.display = 'block';
-			} else {
-				btnctn.classList.remove('btnScroll');
-				btnctnName.style.display = 'none';
-			}
-			canRun = true;
-		}, 100);
-	};
 }
 
 init()
