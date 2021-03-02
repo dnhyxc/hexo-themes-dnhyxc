@@ -84,9 +84,12 @@ body,
   z-index: 999;
 }
 .btnctn {
+  background-color: #666;
+  box-shadow: 0 3px 10px #ccc;
   position: fixed;
   width: 100%;
   height: 50px;
+  margin-bottom: 100px;
   top: -5px;
   z-index: 4;
   text-align: center;
@@ -124,6 +127,7 @@ body,
   font-size: 30px;
   color: #fff;
   font-weight: 700;
+  line-height: 57px;
 }
 
 .article-header {
@@ -194,7 +198,7 @@ body,
 }
 .article {
   padding: 10px;
-  margin: 10px 15px 0px 15px;
+  margin: 10px 10px 0px 10px;
   border: 0;
   font-size: 16px;
   color: #ccc;
@@ -383,7 +387,7 @@ body,
     z-index: 2;
   }
   #header {
-    padding: 20px 0 0 0;
+    padding: 65px 0 0 0;
     .profilepic {
       display: block;
       position: relative;

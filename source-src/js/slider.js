@@ -50,13 +50,13 @@ bodyScroll.onscroll = function () {
 	canRun = false;
 	setTimeout(function () {
 		let eleScrollTop = document.documentElement.scrollTop;
-		if (eleScrollTop !== 0) {
-			btnctn.classList.add('btnScroll');
-			btnctnName.style.display = 'block';
-		} else {
-			btnctn.classList.remove('btnScroll');
-			btnctnName.style.display = 'none';
-		}
+		// if (eleScrollTop !== 0) {
+		// 	btnctn.classList.add('btnScroll');
+		// 	btnctnName.style.display = 'block';
+		// } else {
+		// 	btnctn.classList.remove('btnScroll');
+		// 	btnctnName.style.display = 'none';
+		// }
 		canRun = true;
 	}, 100);
 };

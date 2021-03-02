@@ -144,7 +144,13 @@
     .comments {
       margin: 30px;
       padding: 10px;
-      background: #212121
+      background: #292929;
+      padding-bottom: 5px;
+    }
+
+    .v[data-class=v] {
+      box-shadow: 0 0 5px #ccc;
+      padding: 5px 5px 0;
     }
 
     .vcontent p {
@@ -175,11 +181,28 @@
       display: none;
     }
 
+    .v[data-class=v] .vwrap {
+      border: 1px solid #666;
+      margin: 5px 5px;
+    }
+
+    .v[data-class=v] .vwrap .vheader .vinput {
+      border-bottom: 1px dashed #666;
+    }
+
+    .v[data-class=v] .vcards .vcard .vh {
+      border-bottom: 1px dashed #666;
+    }
+
+    .v[data-class=v] .vcards .vcard .vquote {
+      border-left: none;
+    }
+
     @media screen and (max-width:800px) {
       .comments {
         margin: auto;
         padding: 10px;
-        background: #212121
+        background: #292929
       }
     }
 

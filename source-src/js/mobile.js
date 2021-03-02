@@ -6,7 +6,27 @@ import Browser from './browser'
 // fix hexo 不支持的配置
 import Fix from './fix'
 
-import {addLoadEvent} from './util'
+import { addLoadEvent } from './util'
+
+const btnctnname = document.querySelector('.btnctn-name');
+let path = location.pathname;
+if (path) {
+	btnctnname.innerHTML = 'Informal Essay';
+	if (path !== '/') {
+		const res = path.substr(path.lastIndexOf('/', path.lastIndexOf('/') - 1) + 1);
+		const subPath = res.slice(0, res.length - 1);
+		if (subPath === 'tags') {
+			btnctnname.innerHTML = 'Informal Essay';
+		} else {
+			btnctnname.innerHTML = 'Article-' + subPath[0].toUpperCase() + subPath.slice(1);
+		}
+	} else {
+		btnctnname.innerHTML = 'HOME'
+	}
+} else {
+	btnctnname.innerHTML = 'loading...'
+}
+console.log(path);
 
 function isPathMatch(path, href) {
 	let reg = /\/|index.html/g
@@ -25,23 +45,23 @@ function tabActive() {
 	}
 }
 
-function getElementLeft(element) {　　　　
-	var actualLeft = element.offsetLeft;　　　　
-	var current = element.offsetParent;　　　　
-	while (current !== null) {　　　　　　
-		actualLeft += current.offsetLeft;　　　　
-		current = current.offsetParent;　　
-	}　　
+function getElementLeft(element) {
+	var actualLeft = element.offsetLeft;
+	var current = element.offsetParent;
+	while (current !== null) {
+		actualLeft += current.offsetLeft;
+		current = current.offsetParent;
+	}
 	return actualLeft;
-}　　
-function getElementTop(element) {　　　　
-	var actualTop = element.offsetTop;　　　　
-	var current = element.offsetParent;　　　　
-	while (current !== null) {　　　　　　
-		actualTop += current.offsetTop;　　　　　　
-		current = current.offsetParent;　　　　
-	}　　　　
-	return actualTop;　　
+}
+function getElementTop(element) {
+	var actualTop = element.offsetTop;
+	var current = element.offsetParent;
+	while (current !== null) {
+		actualTop += current.offsetTop;
+		current = current.offsetParent;
+	}
+	return actualTop;
 }
 
 function scrollStop($dom, top, limit, zIndex, diff) {
@@ -99,7 +119,7 @@ function init() {
 
 init();
 
-addLoadEvent(function() {
+addLoadEvent(function () {
 	Fix.init()
 })
 
