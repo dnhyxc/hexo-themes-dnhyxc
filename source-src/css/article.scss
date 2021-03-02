@@ -205,6 +205,9 @@
     padding-bottom: 5px;
     border-bottom: 1px solid #ddd;
   }
+  h3 {
+    border-bottom: 5px solid #888;
+  }
   h3,
   h4,
   h5,
@@ -213,7 +216,6 @@
     font-weight: 300;
     color: #fff;
     padding-bottom: 5px;
-    border-bottom: 5px solid #888;
   }
   video {
     max-width: 100%;
