@@ -142,7 +142,7 @@
 <section id="comments" class="comments">
   <style>
     .comments {
-      margin: 30px;
+      margin: 20px;
       padding: 10px;
       background: #292929;
       padding-bottom: 5px;
@@ -198,11 +198,24 @@
       border-left: none;
     }
 
+    .v[data-class=v] .vcards .vcard .vh .vmeta .vat{
+      margin-right: 5px;
+    }
+
+    .v[data-class=v] .vcards .vcard .vimg {
+      margin-left: 3px;
+    }
+
     @media screen and (max-width:800px) {
       .comments {
         margin: auto;
         padding: 10px;
         background: #292929
+      }      
+      .v[data-class=v] {
+        box-shadow: none;
+        padding: 1px 0 0 0;
+        background-color: #333;
       }
     }
 
