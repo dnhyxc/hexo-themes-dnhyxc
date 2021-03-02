@@ -23,10 +23,7 @@ if (path) {
 	} else {
 		btnctnname.innerHTML = 'HOME'
 	}
-} else {
-	btnctnname.innerHTML = 'loading...'
 }
-console.log(path);
 
 function isPathMatch(path, href) {
 	let reg = /\/|index.html/g
