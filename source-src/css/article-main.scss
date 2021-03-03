@@ -133,7 +133,7 @@
   float: right;
   border-radius: 30px;
   a {
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 8px black;
     color: #ccc;
     font-size: 12px;
     padding: 3px 5px;
@@ -174,9 +174,48 @@
     background-color: #333;
     padding: 0 3px;
 
+    .gt-btn-preview {
+      background-color: #666;
+    }
+
+    .gt-copyright {
+      border-top: none;
+    }
+
+    .gt-user {
+      box-shadow: 0 0 5px #222;
+      background-color: #333333;
+      padding: 0px 3px;
+      border-radius: 5px;
+      font-size: 16px;
+
+      .gt-ico {
+        margin: 0 0;
+        display: none;
+      }
+    }
+
+    .gt-user:hover {
+      background-color: #6190e8;
+    }
+
+    .gt-popup {
+      top: 3.375em;
+      background: #666;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .gt-btn {
+      box-shadow: 0 0 5px #ccc inset;
+      border: 1px solid #666;
+      color: #fff;
+    }
+
     .gt-meta {
       margin: 0 0 1.25em 0;
       border-bottom: 1px solid #666;
+      z-index: 5;
     }
 
     .gt-header-textarea {

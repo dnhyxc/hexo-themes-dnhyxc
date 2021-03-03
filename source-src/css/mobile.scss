@@ -92,7 +92,7 @@ body,
   height: 50px;
   margin-bottom: 100px;
   top: -5px;
-  z-index: 4;
+  z-index: 20;
   text-align: center;
   .slider-trigger {
     position: absolute;
@@ -178,7 +178,7 @@ body,
   min-height: 40px;
   padding-top: 10px;
   margin: 0;
-  border-top: 1px solid #ddd;
+  border-top: 5px solid #666;
 }
 .article-info-post.article-info {
   margin: 0;
@@ -461,4 +461,19 @@ body,
 
 #gitalk-container {
   padding: 0 10px;
+
+  .gt-container {
+    background-color: #333;
+    padding: 0 3px;
+
+    .gt-btn-preview {
+      background-color: #666;
+    }
+
+    .gt-btn {
+      box-shadow: 0 0 5px #ccc inset;
+      border: 1px solid #666;
+      color: #fff;
+    }
+  }
 }
