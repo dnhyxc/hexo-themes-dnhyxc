@@ -144,11 +144,22 @@ busuanzi:
   enable: true
 
 # Valine https://valine.js.org
-valine:
-  appid: k8iXy6BCJ5fbB1TB8DbrUPr9-gzGzoHsz
-  appkey: VszAhjmXdkoNUDRyO0URdndV
-  verify: false #验证码，verify和notify这两个最好就别动了
-  notify: false #评论回复提醒
-  avatar: "" #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
-  placeholder: 精彩的评论从您输入开始 #评论框占位符
-  avatar_cdn: https://avatars.githubusercontent.com/u/57223903?s=460&u=6af037d861ac65ffc7916d60edbe0c541d1cc9d3&v=4
+# valine:
+#   appid: k8iXy6BCJ5fbB1TB8DbrUPr9-gzGzoHsz
+#   appkey: VszAhjmXdkoNUDRyO0URdndV
+#   verify: false #验证码，verify和notify这两个最好就别动了
+#   notify: false #评论回复提醒
+#   avatar: "" #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+#   placeholder: 精彩的评论从您输入开始 #评论框占位符
+#   avatar_cdn: https://avatars.githubusercontent.com/u/57223903?s=460&u=6af037d861ac65ffc7916d60edbe0c541d1cc9d3&v=4
+
+# gitalk 评论
+gitalk:
+  enable: true
+  owner: dnhyxc
+  admin: dnhyxc
+  repo: dnhyxc.github.io
+  ClientID: 5821385ca1ed52b2134e
+  ClientSecret: 60de8d60e1a711ebd05ca957ffd3d2816ddd121e
+  labels: gitalk
+  distractionFreeMode: true
