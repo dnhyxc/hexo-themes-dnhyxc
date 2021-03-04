@@ -175,7 +175,7 @@
     padding: 0 3px;
 
     .gt-btn-preview {
-      background-color: #666;
+      background-color: #6190e8;
     }
 
     .gt-copyright {
@@ -196,7 +196,8 @@
     }
 
     .gt-user:hover {
-      background-color: #6190e8;
+      background-color: #f5edc6;
+      color: #222;
     }
 
     .gt-popup {
@@ -210,6 +211,11 @@
       box-shadow: 0 0 5px #ccc inset;
       border: 1px solid #666;
       color: #fff;
+    }
+
+    .gt-btn:hover {
+      background-color: #f5edc6;
+      color: #222;
     }
 
     .gt-meta {
@@ -263,4 +269,3 @@
     }
   }
 }
-
