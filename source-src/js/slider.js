@@ -80,10 +80,10 @@ bodyScroll.onscroll = function () {
 	}, 100);
 };
 
-if (path) {
+if (decodeURIComponent(path)) {
 	main.innerHTML = 'Informal Essay';
 	if (path !== '/') {
-		const res = path.substr(path.lastIndexOf('/', path.lastIndexOf('/') - 1) + 1);
+		const res = decodeURIComponent(path).substr(decodeURIComponent(path).lastIndexOf('/', decodeURIComponent(path).lastIndexOf('/') - 1) + 1);
 		const subPath = res.slice(0, res.length - 1);
 		if (subPath === 'tags') {
 			main.innerHTML = 'Informal Essay';

@@ -220,6 +220,10 @@
       border-radius: 35px;
       margin-right: 5px;
 
+      &:last-child {
+        margin-right: 0px;
+      }
+
       .github {
         background: url(./img/github.png) no-repeat;
         background-color: #fff;

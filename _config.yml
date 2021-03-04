@@ -4,7 +4,8 @@ author: dnhyxc
 
 menu:
   主 页: /
-  随 笔: /tags
+  分 类: /categories
+  随 笔: /informal
 
 tagcloud: true
 

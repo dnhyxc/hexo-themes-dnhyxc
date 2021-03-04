@@ -152,8 +152,11 @@
   }
 }
 .article-info.info-on-right {
-  margin: 10px 0 0 0;
-  float: right;
+  margin: 10px 5px 0 5px;
+  height: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #666;
+  padding-bottom: 10px;
 }
 .article-info-index.article-info {
   padding-top: 20px;
@@ -269,3 +272,209 @@
     }
   }
 }
+
+// 设置分类页面样式
+.category-count {
+  text-align: center;
+  line-height: 3;
+  font-size: 18px;
+  font-weight: bold;
+}
+.category-list {
+  text-align: center;
+  padding: 20px;
+}
+.category-list li.category-list-item:hover {
+  background-color: #555;
+}
+.tag-cloud {
+  text-align: center;
+  padding: 20px;
+}
+.tag-cloud a {
+  margin: 0 20px;
+  word-break: keep-all;
+  position: relative;
+}
+.tag-cloud a:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.tag-cloud a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #08c;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+/*《分类页面，标签页面样式*/
+/*标题*/
+.category-count {
+  text-align: center;
+  line-height: 3;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: STCaiyun, STXingkai;
+  display: block;
+  /*渐变背景*/
+  background-image: -webkit-linear-gradient(
+    left,
+    #3498db,
+    #f47920 10%,
+    #d71345 20%,
+    #f7acbc 30%,
+    #ffd400 40%,
+    #3498db 50%,
+    #f47920 60%,
+    #d71345 70%,
+    #f7acbc 80%,
+    #ffd400 90%,
+    #3498db
+  );
+  color: transparent;
+  /*文字填充色为透明*/
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /*背景剪裁为文字，只将文字显示为背景*/
+  background-size: 200% 100%;
+  /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+  /* 动画 */
+  animation: masked-animation 4s infinite linear;
+}
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+    /*background-position 属性设置背景图像的起始位置。*/
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+/* 手机端CSS代码 */
+@media screen and (max-width: 960px) {
+  .category-count {
+    text-align: center;
+    line-height: 3;
+    font-size: 27px;
+  }
+}
+/* 分类 */
+.category-list {
+  text-align: center;
+  padding: 20px;
+
+  li.category-list-item {
+    display: inline-block;
+    margin: 0 1em 0.5em 0;
+    padding: 0 5px;
+    box-shadow: 0 0 5px #ccc inset;
+    font-size: 1.2rem;
+    border-radius: 5px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  & li.category-list-item:last-child {
+    margin: 0 0 0.5em 0;
+  }
+}
+
+.category-list li.category-list-item:hover {
+  color: #ffffff;
+}
+
+/* Rectangle In */
+.hvr-rectangle-in {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.5em;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #2098d1;
+  border-radius: 10px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-rectangle-in:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e1e1e1;
+  border-radius: 10px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-rectangle-in:hover,
+.hvr-rectangle-in:focus,
+.hvr-rectangle-in:active {
+  color: white;
+}
+.hvr-rectangle-in:hover:before,
+.hvr-rectangle-in:focus:before,
+.hvr-rectangle-in:active:before {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+/* 分类和标签的分界面 */
+.category-hr-tag {
+}
+
+/* 标签 */
+.tag-cloud {
+  text-align: center;
+  padding: 20px;
+}
+.tag-cloud a {
+  margin: 0 20px;
+  word-break: keep-all;
+  position: relative;
+}
+.tag-cloud a:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.tag-cloud a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #08c;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+/*分类页面，标签页面样式》*/
+
+/*《版权声明的样式*/
+.declare {
+  background-color: #eaeaea;
+  margin-top: 2em;
+  border-left: 3px solid #ff1700;
+  padding: 0.5em 1em;
+}
+/*版权声明的样式》*/
