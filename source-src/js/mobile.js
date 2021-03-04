@@ -9,6 +9,7 @@ import Fix from './fix'
 import { addLoadEvent } from './util'
 
 const btnctnname = document.querySelector('.btnctn-name');
+
 let path = location.pathname;
 if (path) {
 	btnctnname.innerHTML = 'Informal Essay';

@@ -19,8 +19,9 @@ let tipsAs = tipsBox.querySelectorAll('.tips-a');
 let postDva = document.querySelector('#post-dva');
 let atthorName = document.querySelector('.atthorName');
 let btnctn = document.querySelector('.btnctn');
-let btnctnName = document.querySelector('.btnctn-name');
+let wrapper = document.querySelector('#wrapper');
 let main = document.querySelector('.main');
+let scrollTop = document.querySelector('#scrollTop');
 let bodyScroll = document.body;
 
 homeIcon.onclick = function (e) {
@@ -42,6 +43,21 @@ tipsAs.forEach(i => {
 		tipsBox.classList.remove("tip-show");
 	}
 })
+
+scrollTop.onclick = function () {
+	wrapper.scrollTop = 0;
+}
+
+// scrollTop.style.right = (wrapper.offsetWidth / 2 - 22) + 'px';
+
+let timer = null;
+wrapper.onscroll = function () {
+	scrollTop.style.display = 'block';
+	clearTimeout(timer);
+	timer = setTimeout(() => {
+		scrollTop.style.display = 'none';
+	}, 2000);
+};
 
 // 函数节流
 var canRun = true;
