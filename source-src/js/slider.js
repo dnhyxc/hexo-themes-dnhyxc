@@ -48,15 +48,18 @@ scrollTop.onclick = function () {
 	wrapper.scrollTop = 0;
 }
 
-// scrollTop.style.right = (wrapper.offsetWidth / 2 - 22) + 'px';
-
 let timer = null;
 wrapper.onscroll = function () {
-	scrollTop.style.display = 'block';
-	clearTimeout(timer);
-	timer = setTimeout(() => {
+	if (wrapper.scrollTop === 0) {
 		scrollTop.style.display = 'none';
-	}, 2000);
+		clearTimeout(timer);
+	} else {
+		scrollTop.style.display = 'block';
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			scrollTop.style.display = 'none';
+		}, 2000);
+	}
 };
 
 // 函数节流
