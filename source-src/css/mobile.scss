@@ -208,6 +208,10 @@ body,
   }
   .article-entry {
     padding: 10px 0 0;
+
+    .hbe-button {
+      margin-top: 20px;
+    }
   }
   .article-inner h1.article-title,
   .article-title {
@@ -332,7 +336,7 @@ body,
     }
   }
   .archive-article-title {
-    font-size: 16px;
+    font-size: 20px;
   }
   .archive-year-wrap {
     position: relative;
@@ -347,7 +351,7 @@ body,
       margin-right: 10px;
     }
     .time-count {
-      top: -13px;
+      top: -12px;
       right: -5px;
     }
     .article-tag-list-link {
@@ -367,17 +371,6 @@ body,
 }
 
 #footer {
-  // border: 1px solid red;
-  // position: relative;
-  // bottom: 0;
-
-  // .footer-left {
-  //   float: left;
-  //   margin-bottom: 10px;
-  // }
-  // .footer-right {
-  //   float: initial;
-  // }
   position: relative;
   bottom: 0;
 
@@ -422,6 +415,30 @@ body,
   }
 }
 
+.intrude-less {
+  .header-menu {
+    ul {
+      &:last-child {
+        padding-right: 3px;
+      }
+      li {
+        padding: 3px 0 3px 3px;
+        a {
+          background-color: #343434;
+          box-shadow: 0 0 3px #555 inset;
+          border-radius: 5px;
+          color: #fff;
+          &.active {
+            color: #ffd900;
+            background-color: #666;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .header-menu {
   height: auto;
   margin: 12px 0 10px;
@@ -454,7 +471,7 @@ body,
     justify-content: space-around;
     position: relative;
     z-index: 1;
-    background-color: #212121;
+    background-color: #292929;
     box-shadow: 0 0 15px black;
     border-radius: 5px;
   }
@@ -485,19 +502,33 @@ body,
 
 #gitalk-container {
   padding: 0 10px;
+  margin-bottom: 18px;
 
   .gt-container {
     background-color: #333;
     padding: 0 3px;
 
+    .gt-meta {
+      margin: 6px 0 1.25em;
+    }
+
+    .gt-header-controls {
+      display: flex;
+      justify-content: space-between;
+      & :last-child {
+        margin-left: 5px;
+      }
+    }
+
     .gt-btn-preview {
-      background-color: #6190e8;
+      background-color: #343434;
     }
 
     .gt-btn {
-      box-shadow: 0 0 5px #ccc inset;
+      box-shadow: 0 0 6px #666 inset;
       border: 1px solid #666;
-      color: #fff;
+      color: #6190e8;
+      background-color: #343434;
     }
   }
 }
@@ -508,5 +539,10 @@ body,
 
   .hbe-input {
     min-width: 200px;
+  }
+
+  .hbe-input-field-default {
+    padding: 0.8em;
+    margin-bottom: 1.45em;
   }
 }

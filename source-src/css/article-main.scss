@@ -175,7 +175,7 @@
 
   .gt-container {
     background-color: #333;
-    padding: 0 3px;
+    padding: 0 5px 15px 5px;
 
     .gt-btn-preview {
       background-color: #6190e8;
@@ -222,7 +222,7 @@
     }
 
     .gt-meta {
-      margin: 0 0 1.25em 0;
+      margin: 0 1.25em 0;
       border-bottom: 1px solid #666;
       z-index: 5;
     }
@@ -285,7 +285,10 @@
   padding: 20px;
 }
 .category-list li.category-list-item:hover {
-  background-color: #555;
+  background-color: #939393;
+  a {
+    color: gold;
+  }
 }
 .tag-cloud {
   text-align: center;
@@ -373,7 +376,7 @@
     display: inline-block;
     margin: 0 1em 0.5em 0;
     padding: 0 5px;
-    box-shadow: 0 0 5px #ccc inset;
+    box-shadow: 0 0 5px #888;
     font-size: 1.2rem;
     border-radius: 5px;
 
@@ -478,3 +481,10 @@
   padding: 0.5em 1em;
 }
 /*版权声明的样式》*/
+
+// 加密文章样式
+.hbe-content {
+  .hbe-input {
+    margin: 1em 1em 0 1em;
+  }
+}
