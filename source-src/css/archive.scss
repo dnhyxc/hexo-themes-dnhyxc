@@ -76,7 +76,7 @@
         content: "“";
         font-family: serif;
         font-size: 30px;
-        float: left;
+        // float: left;
         margin: 4px 4px 0 -12px;
         color: #c8c8c8;
       }
@@ -98,8 +98,8 @@
     border-radius: 5px;
     margin-bottom: 5px;
 
-    .art-title {
-    }
+    // .art-title {
+    // }
   }
   .article-meta {
     position: relative;
@@ -134,8 +134,8 @@
       cursor: default;
       font-size: 12px;
       margin-right: 0;
-      time {
-      }
+      // time {
+      // }
     }
     .article-category {
       &:before {

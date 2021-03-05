@@ -48,9 +48,9 @@ body,
     .search-wrap {
       width: 300px;
     }
-    .search-tag.tagcloud {
-      // margin-right: -30px;
-    }
+    // .search-tag.tagcloud {
+    //   // margin-right: -30px;
+    // }
     .search-ul .search-li {
       padding: 5px 10px;
     }
@@ -499,5 +499,14 @@ body,
       border: 1px solid #666;
       color: #fff;
     }
+  }
+}
+
+// 加密文章样式
+.hbe-content {
+  font-size: 16px !important;
+
+  .hbe-input {
+    min-width: 200px;
   }
 }
