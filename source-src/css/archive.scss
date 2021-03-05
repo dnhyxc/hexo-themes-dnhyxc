@@ -1,30 +1,3 @@
-// .archives-wrap {
-//   position: relative;
-//   margin: 0 30px;
-//   padding-right: 60px;
-//   border-bottom: 1px solid #eee;
-//   background: #888;
-//   &:first-child {
-//     margin-top: 30px;
-//   }
-//   &:last-child {
-//     margin-bottom: 80px;
-//   }
-//   .archive-year-wrap {
-//     line-height: 35px;
-//     width: 200px;
-//     position: absolute;
-//     padding-top: 15px;
-//     font-size: 1.8em;
-//     z-index: 1;
-//   }
-//   .archive-year-wrap a {
-//     color: #ccc;
-//     font-weight: bold;
-//     padding-left: 48px;
-//   }
-// }
-
 .archives-wrap {
   display: flex;
   justify-content: space-between;
@@ -32,18 +5,24 @@
   background-color: #222;
   box-shadow: 0 0 8px #ccc;
   border-radius: 5px;
-  // padding-bottom: 20px;
+  padding: 8px 8px;
 
   .archive-year-wrap {
-    // width: 100px;
-    padding-left: 5px;
-    margin-right: 10px;
+    position: relative;
+    width: 90px;
+    margin-right: 8px;
+    background-color: #292929;
     .archive-year {
-      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       width: 100%;
       font-size: 28px;
       font-weight: 700;
       color: rgb(217, 255, 0);
+      text-align: center;
+      border-radius: 5px;
+      padding-left: 3px;
     }
   }
 }
@@ -55,10 +34,6 @@
     border: none;
   }
   .archive-article {
-    // margin-left: 200px;
-    // padding: 0 0 20px;
-    // border-bottom: 1px solid #eee;
-    // border-top: 1px solid #fff;
     position: relative;
     &:first-child {
       border-top: none;
@@ -106,7 +81,6 @@
 
 .archive-article-inner {
   display: flex;
-  // justify-content: space-between;
   flex-direction: column;
   .icon-clock {
     margin-right: 5px;
@@ -118,7 +92,6 @@
     background-color: #292929;
     border-radius: 5px;
     margin-bottom: 5px;
-    // box-shadow: -2px 3px 5px #999;
 
     .art-title {
     }
