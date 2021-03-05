@@ -7,6 +7,10 @@ menu:
   分 类: /categories
   归 档: /archives
   随 笔: /informal
+  # 时间轴: /timeline
+  # -page: history
+  #   directory: timeline/
+  #   icon: fa-history
 
 tagcloud: true
 
@@ -82,7 +86,8 @@ favicon:
   #android_manifest: /manifest.json
 
 #你的头像url
-avatar: https://avatars.githubusercontent.com/u/57223903?s=460&u=6af037d861ac65ffc7916d60edbe0c541d1cc9d3&v=4
+avatar: /img/dnhyxc.jpg
+# avatar: https://avatars.githubusercontent.com/u/57223903?s=460&u=6af037d861ac65ffc7916d60edbe0c541d1cc9d3&v=4
 
 #是否开启分享
 share_jia: false
