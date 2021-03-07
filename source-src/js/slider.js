@@ -16,8 +16,9 @@ let leftCol = document.querySelector('.left-col');
 let homeIcon = document.querySelector('#home-icon');
 let tipsBox = document.querySelector('.tips-box');
 let tipsAs = tipsBox.querySelectorAll('.tips-a');
-let postDva = document.querySelector('#post-dva');
+let searchUl = document.querySelector('.search-ul');
 let atthorName = document.querySelector('.atthorName');
+let tagsList = document.querySelector('#tags-list');
 let btnctn = document.querySelector('.btnctn');
 let wrapper = document.querySelector('#wrapper');
 let main = document.querySelector('.main');
@@ -53,6 +54,9 @@ wrapper.onscroll = function () {
 	if (wrapper.scrollTop === 0) {
 		scrollTop.style.display = 'none';
 		clearTimeout(timer);
+	} else if (wrapper.scrollHeight - wrapper.scrollTop === wrapper.clientHeight) {
+		scrollTop.style.display = 'block';
+		clearTimeout(timer);
 	} else {
 		scrollTop.style.display = 'block';
 		clearTimeout(timer);
@@ -61,6 +65,17 @@ wrapper.onscroll = function () {
 		}, 2000);
 	}
 };
+
+scrollTop.onmouseenter = function () {
+	clearTimeout(timer);
+	scrollTop.style.display = 'block';
+}
+
+scrollTop.onmouseleave = function () {
+	timer = setTimeout(() => {
+		scrollTop.style.display = 'none';
+	}, 2000);
+}
 
 // 函数节流
 var canRun = true;

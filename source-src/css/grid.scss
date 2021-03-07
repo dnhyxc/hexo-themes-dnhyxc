@@ -21,7 +21,17 @@ body,
   overflow-x: hidden;
   // overflow-y: auto;
   background: #292929;
+
   overflow-y: hidden;
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  user-select: none;
 }
 #mobile-nav {
   display: none;
@@ -47,25 +57,55 @@ body,
 }
 
 #scrollTop {
-  width: 45px;
-  height: 45px;
+  // width: 45px;
+  // height: 45px;
+  // position: absolute;
+  // left: 50%;
+  // bottom: 70px;
+  // transform: translateX(-50%);
+  // background-color: rgba(225, 225, 225, 0.3);
+  // border-radius: 45px;
+  // box-shadow: 0 0 10px #ccc inset;
+  // z-index: 12;
+  // display: none;
   position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid;
+  border-color: transparent transparent rgb(230, 238, 203);
+  margin: 2px auto;
   left: 50%;
-  bottom: 70px;
+  bottom: 35px;
   transform: translateX(-50%);
-  background-color: rgba(225, 225, 225, 0.3);
-  border-radius: 45px;
-  box-shadow: 0 0 10px #ccc inset;
-  z-index: 12;
   display: none;
+  cursor: pointer;
+  z-index: 20;
 
-  .triangle {
-    width: 0;
-    height: 0;
-    border: 13px solid;
-    border-color: transparent transparent rgb(230, 238, 203);
-    margin: 2px auto;
+  &:hover {
+    bottom: 30px;
+    border: 25px solid;
+    border-color: transparent transparent rgb(195, 251, 8);
+    &::before {
+      content: "back to top";
+      width: 100px;
+      height: 22px;
+      line-height: 22px;
+      position: absolute;
+      top: -25px;
+      left: -50px;
+      font-size: 14px;
+      text-align: center;
+      color: rgb(195, 251, 8);
+    }
   }
+
+  // .triangle {
+  //   width: 0;
+  //   height: 0;
+  //   border: 13px solid;
+  //   border-color: transparent transparent rgb(230, 238, 203);
+  //   margin: 2px auto;
+  // }
 }
 
 .artWrap {

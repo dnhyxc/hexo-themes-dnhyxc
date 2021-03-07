@@ -397,7 +397,9 @@ body,
     margin: 0;
     position: relative;
     z-index: 2;
-    color: #fff;
+    // color: #fff;
+    color: #fff8d6;
+    text-shadow: -1px -1px 0 #fff8d6, 1px 1px 0 #ccc, 1px 1px 0 #ccc;
   }
   .overlay {
     position: absolute;
@@ -545,4 +547,16 @@ body,
     padding: 0.8em;
     margin-bottom: 1.45em;
   }
+}
+
+#page-nav .page-number {
+  width: 20px;
+  height: 25px;
+  background: #4d4d4d;
+  display: inline-block;
+  color: #fff;
+  line-height: 25px;
+  font-size: 12px;
+  margin: 0 5px 25px;
+  border-radius: 2px;
 }

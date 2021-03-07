@@ -31,34 +31,36 @@
           <i class="icon-search icon" q-show="search|isEmptyStr"></i>
           <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
         </div>
-        <div class="widget tagcloud search-tag">
-          <p class="search-tag-wording">tag:</p>
-          <label class="search-switch">
-            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
-          </label>
-          <ul class="article-tag-list" q-show="showTags">
-            <% site.tags.forEach(function(tag, i){ %>
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color<%= tag.name.length % 5 + 1 %>"><%-tag.name%></a>
+        <div class="tagsList">
+          <div class="widget tagcloud search-tag">
+            <p class="search-tag-wording">tag:</p>
+            <label class="search-switch">
+              <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+            </label>
+            <ul class="article-tag-list" id="tags-list" q-show="showTags">
+              <% site.tags.forEach(function(tag, i){ %>
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color<%= tag.name.length % 5 + 1 %>"><%-tag.name%></a>
+              </li>
+              <% }) %>
+              <div class="clearfix"></div>
+            </ul>
+          </div>
+          <ul class="search-ul">
+            <li class="search-li" q-repeat="items" q-show="isShow">
+              <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span
+                  q-text="title"></span></a>
+              <p class="search-time">
+                <i class="icon-calendar icon"></i>
+                <span q-text="date|dateformat"></span>
+              </p>
+              <p class="search-tag">
+                <i class="icon-price-tags icon"></i>
+                <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+              </p>
             </li>
-            <% }) %>
-            <div class="clearfix"></div>
           </ul>
         </div>
-        <ul class="search-ul">
-          <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span
-                q-text="title"></span></a>
-            <p class="search-time">
-              <i class="icon-calendar icon"></i>
-              <span q-text="date|dateformat"></span>
-            </p>
-            <p class="search-tag">
-              <i class="icon-price-tags icon"></i>
-              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
-            </p>
-          </li>
-        </ul>
       </section>
       <%}%>
 

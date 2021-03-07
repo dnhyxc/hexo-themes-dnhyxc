@@ -1,11 +1,18 @@
 function init() {
 	// 由于hexo分页不支持，手工美化
 	var $nav = document.querySelector('#page-nav')
+
+	let $a = document.createElement('a');
+	$a.setAttribute('class', 'extend prev disabled');
+	$a.setAttribute('rel', 'prev');
+
 	if ($nav && !document.querySelector('#page-nav .extend.prev')) {
-		$nav.innerHTML = '<a class="extend prev disabled" rel="prev">&laquo; Prev</a>' + $nav.innerHTML
+		$a.innerHTML = '<< 上一页';
+		$nav.insertBefore($a, $nav.firstElementChild);
 	}
 	if ($nav && !document.querySelector('#page-nav .extend.next')) {
-		$nav.innerHTML = $nav.innerHTML + '<a class="extend next disabled" rel="next">Next &raquo;</a>'
+		$a.innerHTML = '下一页 >>';
+		$nav.appendChild($a);
 	}
 
 	// 新窗口打开
@@ -31,7 +38,7 @@ function init() {
 	if ($aboutme && $aboutme.length !== 0) {
 		$aboutme.innerHTML = $aboutme.innerText
 	}
-	
+
 }
 
 module.exports = {

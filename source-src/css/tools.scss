@@ -35,7 +35,7 @@
   .tools-section {
     .search-wrap {
       box-sizing: border-box;
-      margin: 20px 0 20px 0;
+      margin: 20px 0 8px 0;
       position: relative;
       .search-ipt {
         padding-left: 5px;
@@ -61,6 +61,11 @@
         color: #ededed;
       }
     }
+
+    .tagsList {
+      height: calc(100% - 60px);
+      overflow-y: auto;
+    }
     .search-tag.tagcloud {
       text-align: center;
       position: relative;
@@ -73,6 +78,7 @@
         width: 40px;
         height: 25px;
         display: block;
+        margin-bottom: 15px;
       }
       .search-switch input {
         width: 40px;
@@ -130,9 +136,11 @@
       .article-tag-list {
         @extend %trans;
         display: none;
-        margin: 15px 0;
+        margin-bottom: 2px;
         padding: 10px;
         background: rgba(255, 255, 255, 0.2);
+        // max-height: 132px;
+        // overflow-y: auto;
         &.show {
           display: block;
         }
@@ -145,10 +153,15 @@
       color: rgba(77, 77, 77, 0.75);
       -webkit-overflow-scrolling: touch;
       overflow-scrolling: touch;
-      overflow-y: auto;
+      // overflow-y: auto;
+      // max-height: calc(100% - 259px);
+      padding-bottom: 20px;
       .search-li {
         padding: 10px 10px;
         border-bottom: 1px dotted #dcdcdc;
+        // &:last-child {
+        //   border-bottom: none;
+        // }
         &:hover {
           background: rgba(255, 255, 255, 0.2);
         }
