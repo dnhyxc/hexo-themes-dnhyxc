@@ -72,7 +72,7 @@ body,
   width: 0;
   height: 0;
   border: 15px solid;
-  border-color: transparent transparent rgb(230, 238, 203);
+  border-color: transparent transparent #ffec8b;
   margin: 2px auto;
   left: 50%;
   bottom: 35px;
@@ -84,7 +84,7 @@ body,
   &:hover {
     bottom: 30px;
     border: 25px solid;
-    border-color: transparent transparent rgb(195, 251, 8);
+    border-color: transparent transparent #c0ff3e;
     &::before {
       content: "back to top";
       width: 100px;
@@ -95,7 +95,7 @@ body,
       left: -50px;
       font-size: 14px;
       text-align: center;
-      color: rgb(195, 251, 8);
+      color: #c0ff3e;
     }
   }
 
