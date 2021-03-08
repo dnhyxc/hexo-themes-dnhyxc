@@ -10,7 +10,11 @@ body,
 }
 .body-wrap {
   margin-bottom: 0;
-  overflow: hidden;
+  overflow: visible;
+  height: auto;
+}
+.scrollTop {
+  display: none;
 }
 .main {
   display: none;

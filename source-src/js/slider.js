@@ -49,20 +49,34 @@ scrollTop.onclick = function () {
 	wrapper.scrollTop = 0;
 }
 
-let timer = null;
-wrapper.onscroll = function () {
-	if (wrapper.scrollTop === 0) {
+window.onresize = function () {
+	if (bodyScroll.clientWidth <= 800) {
 		scrollTop.style.display = 'none';
-		clearTimeout(timer);
-	} else if (wrapper.scrollHeight - wrapper.scrollTop === wrapper.clientHeight) {
-		scrollTop.style.display = 'block';
-		clearTimeout(timer);
+	}
+};
+
+let timer = null;
+let count = document.createElement('span');
+count.className = 'scroll-count';
+wrapper.onscroll = function () {
+	count.innerHTML = `${parseInt((wrapper.scrollTop / (wrapper.scrollHeight - wrapper.offsetHeight) * 100))}%`;
+	scrollTop.appendChild(count);
+	if (bodyScroll.clientWidth <= 800) {
+		scrollTop.style.display = 'none';
 	} else {
-		scrollTop.style.display = 'block';
-		clearTimeout(timer);
-		timer = setTimeout(() => {
+		if (wrapper.scrollTop === 0) {
 			scrollTop.style.display = 'none';
-		}, 2000);
+			clearTimeout(timer);
+		} else if (wrapper.scrollHeight - wrapper.scrollTop === wrapper.clientHeight && bodyScroll.clientWidth >= 800) {
+			scrollTop.style.display = 'block';
+			clearTimeout(timer);
+		} else {
+			scrollTop.style.display = 'block';
+			clearTimeout(timer);
+			timer = setTimeout(() => {
+				scrollTop.style.display = 'none';
+			}, 2000);
+		}
 	}
 };
 
@@ -72,9 +86,14 @@ scrollTop.onmouseenter = function () {
 }
 
 scrollTop.onmouseleave = function () {
-	timer = setTimeout(() => {
-		scrollTop.style.display = 'none';
-	}, 2000);
+	if (wrapper.scrollHeight - wrapper.scrollTop === wrapper.clientHeight) {
+		clearTimeout(timer);
+		scrollTop.style.display = 'block';
+	} else {
+		timer = setTimeout(() => {
+			scrollTop.style.display = 'none';
+		}, 2000);
+	}
 }
 
 // 函数节流

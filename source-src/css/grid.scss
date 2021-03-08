@@ -75,10 +75,28 @@ body,
   cursor: pointer;
   z-index: 20;
 
+  .scroll-count {
+    position: absolute;
+    top: -23px;
+    left: -50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #ffec8b;
+  }
+
   &:hover {
     bottom: 30px;
     border: 25px solid;
     border-color: transparent transparent #c0ff3e;
+    .scroll-count {
+      position: absolute;
+      top: 10px;
+      left: -50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      color: #111;
+      font-weight: 700;
+    }
     &::before {
       content: "back to top";
       width: 100px;
