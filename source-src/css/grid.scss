@@ -21,7 +21,6 @@ body,
   overflow-x: hidden;
   // overflow-y: auto;
   background: #292929;
-
   overflow-y: hidden;
   -moz-user-select: none;
   /*火狐*/
@@ -33,6 +32,12 @@ body,
   /*早期浏览器*/
   user-select: none;
 }
+
+// 更改为白天模式
+// #container {
+//   background-color: #fff;
+// }
+
 #mobile-nav {
   display: none;
 }
@@ -57,17 +62,6 @@ body,
 }
 
 #scrollTop {
-  // width: 45px;
-  // height: 45px;
-  // position: absolute;
-  // left: 50%;
-  // bottom: 70px;
-  // transform: translateX(-50%);
-  // background-color: rgba(225, 225, 225, 0.3);
-  // border-radius: 45px;
-  // box-shadow: 0 0 10px #ccc inset;
-  // z-index: 12;
-  // display: none;
   position: absolute;
   width: 0;
   height: 0;
@@ -98,14 +92,6 @@ body,
       color: #c0ff3e;
     }
   }
-
-  // .triangle {
-  //   width: 0;
-  //   height: 0;
-  //   border: 13px solid;
-  //   border-color: transparent transparent rgb(230, 238, 203);
-  //   margin: 2px auto;
-  // }
 }
 
 .artWrap {
@@ -148,7 +134,6 @@ body,
     margin: 10px 10px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    // box-shadow: 0 5px 10px #ccc inset;
     box-shadow: inset 0 2px 8px #ccc;
     font-size: 24px;
     font-weight: 700;
