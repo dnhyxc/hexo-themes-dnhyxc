@@ -86,11 +86,23 @@
   padding: 14px 0px 15px 10px;
   padding-left: calc(7.6923% - 8px);
   border-top-left-radius: 10px;
+  cursor: pointer;
+
+  .article-count {
+    padding-right: 7.6923%;
+    display: none;
+    color: #999;
+  }
+  &:hover {
+    .article-count {
+      display: block;
+    }
+  }
 }
 
 .time-count {
   position: absolute;
-  top: 32px;
+  top: 23px;
   right: 7.6923%;
 }
 
