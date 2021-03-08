@@ -86,12 +86,16 @@
   padding: 14px 0px 15px 10px;
   padding-left: calc(7.6923% - 8px);
   border-top-left-radius: 10px;
-  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   .article-count {
     padding-right: 7.6923%;
     display: none;
     color: #999;
+    margin-left: 10px;
+    padding-bottom: 7px;
   }
   &:hover {
     .article-count {
@@ -102,12 +106,16 @@
 
 .time-count {
   position: absolute;
-  top: 23px;
+  top: 20px;
   right: 7.6923%;
+
+  .count {
+    font-size: 15.5px;
+  }
 }
 
 // .archive-article-date {
-//   // padding-right: 4px;
+//   padding-bottom: 3px;
 // }
 
 .article-meta {
