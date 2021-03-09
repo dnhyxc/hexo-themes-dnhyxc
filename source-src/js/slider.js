@@ -67,7 +67,7 @@ wrapper.onscroll = function () {
 		if (wrapper.scrollTop === 0) {
 			scrollTop.style.display = 'none';
 			clearTimeout(timer);
-		} else if (wrapper.scrollHeight - wrapper.scrollTop === wrapper.clientHeight && bodyScroll.clientWidth >= 800) {
+		} else if (wrapper.scrollHeight - wrapper.scrollTop === wrapper.clientHeight) {
 			scrollTop.style.display = 'block';
 			clearTimeout(timer);
 		} else {
