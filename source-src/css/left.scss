@@ -59,7 +59,7 @@
           background-size: 200% 100%;
           /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
           /* 动画 */
-          animation: masked-animation 4s infinite linear;
+          animation: masked-animation 5s infinite linear;
           & :first-child {
             margin-bottom: 10px;
           }
@@ -267,11 +267,11 @@
         transition: 0.3s;
         font-weight: 700;
         a {
-          color: #fff8d6;
-          text-shadow: -1px -1px 0 #fff8d6, 2px 2px 0 #ccc, 1px 1px 0 #ccc;
+          color: #ffec8b;
+          text-shadow: -1px -1px 0 #ffec8b, 1px 1px 0 #ccc, 1px 1px 0 #ccc;
 
           &:hover {
-            color: gold;
+            color: rgb(255, 208, 0);
           }
         }
       }
