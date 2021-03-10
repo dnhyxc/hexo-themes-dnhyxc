@@ -140,8 +140,7 @@
 .article-more-link {
   position: absolute;
   right: 0;
-  bottom: 22px;
-  // margin-top: 0;
+  bottom: 20px;
   text-align: left;
   float: right;
   border-radius: 10px;
@@ -149,7 +148,7 @@
     box-shadow: 0 0 8px black;
     color: #ccc;
     font-size: 12px;
-    padding: 3px 5px;
+    padding: 1px 5px;
     line-height: 14px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -174,9 +173,9 @@
   position: relative;
   padding-top: 20px;
   margin: 20px $articlePadding 10px $articlePadding;
-  // 20px 7.6923% 10px 7.6923%;
   min-height: 72px;
   border-top: 5px solid #555;
+  padding-right: 90px;
 
   // .clearfix {
   //   margin-bottom: 20px;
@@ -490,10 +489,16 @@
 
 /*版权声明的样式*/
 .declare {
-  background-color: #eaeaea;
+  background-color: #333;
   margin-top: 2em;
-  border-left: 3px solid #ff1700;
+  border-left: 3px solid gold;
   padding: 0.5em 1em;
+  word-break: break-all;
+
+  // strong {
+  //   font-weight: 700;
+  //   color: #ccc !important;
+  // }
 }
 /*版权声明的样式*/
 
