@@ -18,8 +18,8 @@ let tipsBox = document.querySelector('.tips-box');
 let tipsAs = tipsBox.querySelectorAll('.tips-a');
 let searchUl = document.querySelector('.search-ul');
 let atthorName = document.querySelector('.atthorName');
-let tagsList = document.querySelector('#tags-list');
-let btnctn = document.querySelector('.btnctn');
+let toolsCol = document.querySelector('.tools-col');
+let midCol = document.querySelector('.mid-col');
 let wrapper = document.querySelector('#wrapper');
 let main = document.querySelector('.main');
 let scrollTop = document.querySelector('#scrollTop');
@@ -96,24 +96,6 @@ scrollTop.onmouseleave = function () {
 	}
 }
 
-// 函数节流
-var canRun = true;
-bodyScroll.onscroll = function () {
-	if (!canRun) return;
-	canRun = false;
-	setTimeout(function () {
-		let eleScrollTop = document.documentElement.scrollTop;
-		// if (eleScrollTop !== 0) {
-		// 	btnctn.classList.add('btnScroll');
-		// 	btnctnName.style.display = 'block';
-		// } else {
-		// 	btnctn.classList.remove('btnScroll');
-		// 	btnctnName.style.display = 'none';
-		// }
-		canRun = true;
-	}, 100);
-};
-
 if (decodeURIComponent(path)) {
 	main.innerHTML = 'Informal Essay';
 	if (path !== '/') {
@@ -188,6 +170,16 @@ function init() {
 				app.$set('isShow', true)
 				app.$set('isCtnShow', true)
 				setScrollZero()
+				if (app.isShow && bodyScroll.clientWidth <= 800) {
+					bodyScroll.style.position = 'fixed';
+				}
+				// if (app.isShow && bodyScroll.clientWidth <= 800) {
+				// 	const elScrollTop = document.documentElement.scrollTop;
+				// 	console.log(elScrollTop);
+				// 	bodyScroll.style.offsetTop = `${elScrollTop}px`;
+				// 	console.log(bodyScroll.style.offsetTop);
+				// 	bodyScroll.style.position = 'fixed';
+				// }
 			}
 		},
 		filters: {
@@ -274,6 +266,9 @@ function init() {
 	document.querySelector('#container').onclick = (e) => {
 		if (app.isShow) {
 			app.$set('isShow', false)
+			if (bodyScroll.clientWidth <= 800) {
+				bodyScroll.style.position = 'relative'
+			}
 			setTimeout(() => {
 				app.$set('isCtnShow', false)
 			}, 300)
@@ -323,6 +318,9 @@ function init() {
 		if (direction === 3) {
 			if (app.isShow) {
 				app.$set('isShow', false)
+				if (bodyScroll.clientWidth <= 800) {
+					bodyScroll.style.position = 'relative'
+				}
 				setTimeout(() => {
 					app.$set('isCtnShow', false)
 				}, 300)
