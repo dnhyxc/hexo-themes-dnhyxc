@@ -127,6 +127,8 @@ function setScrollZero() {
 	})
 }
 
+let elScrollTop;
+
 function init() {
 	let app = new Q({
 		el: '#container',
@@ -171,15 +173,10 @@ function init() {
 				app.$set('isCtnShow', true)
 				setScrollZero()
 				if (app.isShow && bodyScroll.clientWidth <= 800) {
+					elScrollTop = document.documentElement.scrollTop;
 					bodyScroll.style.position = 'fixed';
+					bodyScroll.style.top = elScrollTop * -1 + 'px';
 				}
-				// if (app.isShow && bodyScroll.clientWidth <= 800) {
-				// 	const elScrollTop = document.documentElement.scrollTop;
-				// 	console.log(elScrollTop);
-				// 	bodyScroll.style.offsetTop = `${elScrollTop}px`;
-				// 	console.log(bodyScroll.style.offsetTop);
-				// 	bodyScroll.style.position = 'fixed';
-				// }
 			}
 		},
 		filters: {
@@ -267,7 +264,9 @@ function init() {
 		if (app.isShow) {
 			app.$set('isShow', false)
 			if (bodyScroll.clientWidth <= 800) {
-				bodyScroll.style.position = 'relative'
+				bodyScroll.style.position = 'relative';
+				bodyScroll.style.top = '0px';
+				document.documentElement.scrollTop = elScrollTop;
 			}
 			setTimeout(() => {
 				app.$set('isCtnShow', false)
@@ -319,7 +318,9 @@ function init() {
 			if (app.isShow) {
 				app.$set('isShow', false)
 				if (bodyScroll.clientWidth <= 800) {
-					bodyScroll.style.position = 'relative'
+					bodyScroll.style.position = 'relative';
+					bodyScroll.style.top = '0px';
+					document.documentElement.scrollTop = elScrollTop;
 				}
 				setTimeout(() => {
 					app.$set('isCtnShow', false)
