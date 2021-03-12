@@ -176,6 +176,10 @@ function init() {
 					elScrollTop = document.documentElement.scrollTop;
 					bodyScroll.style.position = 'fixed';
 					bodyScroll.style.top = elScrollTop * -1 + 'px';
+					bodyScroll.addEventListener('touchmove', function (event) {
+						console.log(1111)
+						event.preventDefault();
+					}, false);
 				}
 			}
 		},
@@ -263,11 +267,11 @@ function init() {
 	document.querySelector('#container').onclick = (e) => {
 		if (app.isShow) {
 			app.$set('isShow', false)
-			if (bodyScroll.clientWidth <= 800) {
-				bodyScroll.style.position = 'relative';
-				bodyScroll.style.top = '0px';
-				document.documentElement.scrollTop = elScrollTop;
-			}
+			// if (bodyScroll.clientWidth <= 800) {
+			bodyScroll.style.position = 'relative';
+			bodyScroll.style.top = '0px';
+			document.documentElement.scrollTop = elScrollTop;
+			// }
 			setTimeout(() => {
 				app.$set('isCtnShow', false)
 			}, 300)
@@ -317,11 +321,9 @@ function init() {
 		if (direction === 3) {
 			if (app.isShow) {
 				app.$set('isShow', false)
-				if (bodyScroll.clientWidth <= 800) {
-					bodyScroll.style.position = 'relative';
-					bodyScroll.style.top = '0px';
-					document.documentElement.scrollTop = elScrollTop;
-				}
+				bodyScroll.style.position = 'relative';
+				bodyScroll.style.top = '0px';
+				document.documentElement.scrollTop = elScrollTop;
 				setTimeout(() => {
 					app.$set('isCtnShow', false)
 				}, 300)
