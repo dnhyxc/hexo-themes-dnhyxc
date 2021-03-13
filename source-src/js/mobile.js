@@ -9,12 +9,6 @@ import Fix from './fix'
 import { addLoadEvent } from './util'
 
 const btnctnname = document.querySelector('.btnctn-name');
-const tooltipContent = document.querySelector('.tooltip-content');
-const tocArticle = document.querySelector('.toc-article');
-
-tocArticle.onscroll = function (e) {
-	e.preventDefault();
-}
 
 let path = location.pathname;
 if (decodeURIComponent(path)) {
