@@ -106,7 +106,7 @@
 
   .tooltip-east .tooltip-content::before,
   .tooltip-east .tooltip-content::after {
-    left: 99%; /* because of FF, otherwise we have a gap */
+    left: 100%; /* because of FF, otherwise we have a gap */
   }
 
   .tooltip-east .tooltip-content::after {
