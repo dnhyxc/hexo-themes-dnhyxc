@@ -12,15 +12,18 @@ const tocLink = document.querySelectorAll('.toc-link');
 const tocArticle = document.querySelector('.toc-article');
 
 let scTop = [];
-tocArticle.parentNode.parentNode.onmouseenter = function () {
-	if (document.documentElement.scrollTop !== 0) {
-		if (scTop.length > 0) {
-			scTop.splice(0, 1, document.documentElement.scrollTop);
-		} else {
-			scTop.push(document.documentElement.scrollTop);
+if (tocArticle && tocArticle.parentNode) {
+	tocArticle.parentNode.parentNode.onmouseenter = function () {
+		if (document.documentElement.scrollTop !== 0) {
+			if (scTop.length > 0) {
+				scTop.splice(0, 1, document.documentElement.scrollTop);
+			} else {
+				scTop.push(document.documentElement.scrollTop);
+			}
 		}
 	}
 }
+
 tocLink.forEach(i => {
 	i.onclick = function () {
 		if (document.documentElement.scrollTop !== 0) {
@@ -32,44 +35,33 @@ tocLink.forEach(i => {
 		}
 	}
 })
-tocArticle.parentNode.parentNode.onmouseout = function () {
-	if (document.documentElement.scrollTop !== 0) {
-		if (scTop.length > 0) {
-			scTop.splice(0, 1, document.documentElement.scrollTop);
-		} else {
-			scTop.push(document.documentElement.scrollTop);
-		}
-	}
-	document.body.style.position = 'relative';
-	document.body.style.width = '100%';
-	document.body.style.top = 'auto';
-	document.documentElement.scrollTop = scTop[0];
-}
 
-tocArticle.addEventListener('scroll', function (e) {
-	if (document.documentElement.scrollTop !== 0) {
-		if (scTop.length > 0) {
-			scTop.splice(0, 1, document.documentElement.scrollTop);
-		} else {
-			scTop.push(document.documentElement.scrollTop);
+if (tocArticle) {
+	tocArticle.addEventListener('scroll', function (e) {
+		if (document.documentElement.scrollTop !== 0) {
+			if (scTop.length > 0) {
+				scTop.splice(0, 1, document.documentElement.scrollTop);
+			} else {
+				scTop.push(document.documentElement.scrollTop);
+			}
 		}
-	}
-	e.preventDefault();
-	if (
-		document.body.clientWidth <= 800
-		&& tocArticle.scrollHeight - tocArticle.scrollTop === tocArticle.clientHeight
-		|| tocArticle.scrollTop === 0
-	) {
-		document.body.style.position = 'fixed';
-		document.body.style.width = '100%';
-		document.body.style.top = -1 * scTop[0] + 'px';
-	} else if (tocArticle.scrollTop !== 0 || tocArticle.scrollHeight - tocArticle.scrollTop !== tocArticle.clientHeight) {
-		document.body.style.position = 'relative';
-		document.body.style.width = '100%';
-		document.body.style.top = 'auto';
-		document.documentElement.scrollTop = scTop[0];
-	}
-});
+		e.preventDefault();
+		if (
+			document.body.clientWidth <= 800
+			&& tocArticle.scrollHeight - tocArticle.scrollTop === tocArticle.clientHeight
+			|| tocArticle.scrollTop === 0
+		) {
+			document.body.style.position = 'fixed';
+			document.body.style.width = '100%';
+			document.body.style.top = -1 * scTop[0] + 'px';
+		} else if (tocArticle.scrollTop !== 0 || tocArticle.scrollHeight - tocArticle.scrollTop !== tocArticle.clientHeight) {
+			document.body.style.position = 'relative';
+			document.body.style.width = '100%';
+			document.body.style.top = 'auto';
+			document.documentElement.scrollTop = scTop[0];
+		}
+	});
+}
 
 const btnctnname = document.querySelector('.btnctn-name');
 
