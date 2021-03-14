@@ -5,6 +5,41 @@ body,
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+// .afterNode::after {
+//   content: "";
+//   position: fixed;
+//   top: 345px;
+//   left: 0;
+//   width: 100%;
+//   height: 500px;
+//   z-index: 999;
+//   background: transparent;
+//   overflow: hidden;
+// }
+
+.openScroll {
+  position: fixed;
+  top: 345px;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  z-index: 999;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px solid greenyellow;
+  overflow-y: auto;
+}
+
+.openChild {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  height: 505px;
+  background: transparent;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
 #mobile-nav {
   display: block;
 }
