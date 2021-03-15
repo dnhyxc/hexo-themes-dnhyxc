@@ -13,7 +13,8 @@ const tocArticle = document.querySelector('.toc-article');
 
 let scTop = [];
 if (tocArticle && tocArticle.parentNode) {
-	tocArticle.parentNode.parentNode.onmouseenter = function () {
+	// console.log(tocArticle.parentNode.parentNode);
+	tocArticle.parentNode.parentNode.onclick = function () {
 		if (document.documentElement.scrollTop !== 0) {
 			if (scTop.length > 0) {
 				scTop.splice(0, 1, document.documentElement.scrollTop);
@@ -36,6 +37,21 @@ tocLink.forEach(i => {
 	}
 })
 
+document.documentElement.onclick = function () {
+	console.log(1111)
+	if (document.documentElement.scrollTop !== 0) {
+		if (scTop.length > 0) {
+			scTop.splice(0, 1, document.documentElement.scrollTop);
+		} else {
+			scTop.push(document.documentElement.scrollTop);
+		}
+	}
+	document.body.style.position = 'relative';
+	document.body.style.width = '100%';
+	document.body.style.top = 'auto';
+	document.documentElement.scrollTop = scTop[0];
+}
+
 if (tocArticle) {
 	tocArticle.addEventListener('scroll', function (e) {
 		if (document.documentElement.scrollTop !== 0) {
@@ -45,7 +61,6 @@ if (tocArticle) {
 				scTop.push(document.documentElement.scrollTop);
 			}
 		}
-		e.preventDefault();
 		if (
 			document.body.clientWidth <= 800
 			&& tocArticle.scrollHeight - tocArticle.scrollTop === tocArticle.clientHeight
