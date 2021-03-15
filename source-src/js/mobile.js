@@ -11,15 +11,36 @@ import { addLoadEvent } from './util'
 const tocLink = document.querySelectorAll('.toc-link');
 const tocArticle = document.querySelector('.toc-article');
 
+
 let scTop = [];
+
+function allowScroll() {
+	document.body.style.position = 'relative';
+	document.body.style.width = '100%';
+	document.body.style.top = 'auto';
+	document.documentElement.scrollTop = scTop[0];
+}
+
+function stopScroll() {
+	document.body.style.position = 'fixed';
+	document.body.style.width = '100%';
+	document.body.style.top = -1 * scTop[0] + 'px';
+}
+
 if (tocArticle && tocArticle.parentNode) {
-	tocArticle.parentNode.parentNode.onclick = function () {
+	tocArticle.parentNode.parentNode.onclick = function (e) {
+		e.stopPropagation()
 		if (document.documentElement.scrollTop !== 0) {
 			if (scTop.length > 0) {
 				scTop.splice(0, 1, document.documentElement.scrollTop);
 			} else {
 				scTop.push(document.documentElement.scrollTop);
 			}
+		}
+		if (document.body.clientWidth <= 800 && Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)) {
+			stopScroll();
+		} else if (document.body.clientWidth <= 800 && tocArticle.scrollTop === 0) {
+			stopScroll();
 		}
 	}
 }
@@ -44,10 +65,7 @@ document.documentElement.onclick = function () {
 			scTop.push(document.documentElement.scrollTop);
 		}
 	}
-	document.body.style.position = 'relative';
-	document.body.style.width = '100%';
-	document.body.style.top = 'auto';
-	document.documentElement.scrollTop = scTop[0];
+	allowScroll();
 }
 
 if (tocArticle) {
@@ -63,18 +81,11 @@ if (tocArticle) {
 			document.body.clientWidth <= 800
 			&& Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)
 		) {
-			document.body.style.position = 'fixed';
-			document.body.style.width = '100%';
-			document.body.style.top = -1 * scTop[0] + 'px';
+			stopScroll();
 		} else if (document.body.clientWidth <= 800 && tocArticle.scrollTop === 0) {
-			document.body.style.position = 'fixed';
-			document.body.style.width = '100%';
-			document.body.style.top = -1 * scTop[0] + 'px';
+			stopScroll();
 		} else if (tocArticle.scrollTop > 0 || tocArticle.scrollHeight - tocArticle.scrollTop < tocArticle.clientHeight) {
-			document.body.style.position = 'relative';
-			document.body.style.width = '100%';
-			document.body.style.top = 'auto';
-			document.documentElement.scrollTop = scTop[0];
+			allowScroll();
 		}
 	});
 }
