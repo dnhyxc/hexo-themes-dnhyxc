@@ -13,7 +13,6 @@ const tocArticle = document.querySelector('.toc-article');
 
 let scTop = [];
 if (tocArticle && tocArticle.parentNode) {
-	// console.log(tocArticle.parentNode.parentNode);
 	tocArticle.parentNode.parentNode.onclick = function () {
 		if (document.documentElement.scrollTop !== 0) {
 			if (scTop.length > 0) {
@@ -38,7 +37,6 @@ tocLink.forEach(i => {
 })
 
 document.documentElement.onclick = function () {
-	console.log(1111)
 	if (document.documentElement.scrollTop !== 0) {
 		if (scTop.length > 0) {
 			scTop.splice(0, 1, document.documentElement.scrollTop);
@@ -63,13 +61,16 @@ if (tocArticle) {
 		}
 		if (
 			document.body.clientWidth <= 800
-			&& tocArticle.scrollHeight - tocArticle.scrollTop === tocArticle.clientHeight
-			|| tocArticle.scrollTop === 0
+			&& Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)
 		) {
 			document.body.style.position = 'fixed';
 			document.body.style.width = '100%';
 			document.body.style.top = -1 * scTop[0] + 'px';
-		} else if (tocArticle.scrollTop !== 0 || tocArticle.scrollHeight - tocArticle.scrollTop !== tocArticle.clientHeight) {
+		} else if (document.body.clientWidth <= 800 && tocArticle.scrollTop === 0) {
+			document.body.style.position = 'fixed';
+			document.body.style.width = '100%';
+			document.body.style.top = -1 * scTop[0] + 'px';
+		} else if (tocArticle.scrollTop > 0 || tocArticle.scrollHeight - tocArticle.scrollTop < tocArticle.clientHeight) {
 			document.body.style.position = 'relative';
 			document.body.style.width = '100%';
 			document.body.style.top = 'auto';
