@@ -38,7 +38,7 @@ body,
 
 .tooltip-left {
   .tooltip-content {
-    background: url(./img/dnhyxc.jpg) no-repeat bottom center;
+    background: url(./img/dnhyxc.jpg) bottom center;
   }
   .tooltip-content:after {
     content: none;
@@ -60,7 +60,13 @@ body,
   font-size: 10px;
 
   .tooltip-left .tooltip-content:before {
-    content: none;
+    // content: none;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: -20px;
+    left: initial;
+    right: 0;
   }
 
   // .toc-container.tooltip-left .tooltip-east .tooltip-content .toc-article {

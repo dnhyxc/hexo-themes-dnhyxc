@@ -66,7 +66,7 @@ body,
   width: 0;
   height: 0;
   border: 15px solid;
-  border-color: transparent transparent #ffec8b;
+  border-color: transparent transparent #969696;
   margin: 2px auto;
   left: 50%;
   bottom: 35px;
@@ -81,13 +81,13 @@ body,
     left: -50%;
     transform: translateX(-50%);
     font-size: 12px;
-    color: #ffec8b;
+    color: #969696;
   }
 
   &:hover {
     bottom: 30px;
     border: 25px solid;
-    border-color: transparent transparent #c0ff3e;
+    border-color: transparent transparent #ffd900;
     .scroll-count {
       position: absolute;
       top: 10px;
@@ -107,7 +107,7 @@ body,
       left: -50px;
       font-size: 14px;
       text-align: center;
-      color: #c0ff3e;
+      color: #ffd900;
     }
   }
 }

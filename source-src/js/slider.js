@@ -46,7 +46,14 @@ tipsAs.forEach(i => {
 })
 
 scrollTop.onclick = function () {
-	wrapper.scrollTop = 0;
+	// wrapper.scrollTop = 0;
+	const clock = setInterval(function () {
+		if (wrapper.scrollTop !== 0) {
+			wrapper.scrollTop -= Math.fround(wrapper.scrollTop / 10);
+		} else {
+			clearInterval(clock);
+		}
+	}, 10);
 }
 
 window.onresize = function () {
