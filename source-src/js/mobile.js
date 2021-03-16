@@ -10,7 +10,8 @@ import { addLoadEvent } from './util'
 
 const tocLink = document.querySelectorAll('.toc-link');
 const tocArticle = document.querySelector('.toc-article');
-
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocItems = document.querySelectorAll('.toc-item');
 
 let scTop = [];
 
@@ -27,16 +28,28 @@ function stopScroll() {
 	document.body.style.top = -1 * scTop[0] + 'px';
 }
 
+function getEleScrollTop() {
+	if (document.documentElement.scrollTop !== 0) {
+		if (scTop.length > 0) {
+			scTop.splice(0, 1, document.documentElement.scrollTop);
+		} else {
+			scTop.push(document.documentElement.scrollTop);
+		}
+	}
+}
+
+tocItems.forEach(i => {
+	i.onclick = function (e) {
+		getEleScrollTop();
+		e.stopPropagation();
+		allowScroll();
+	}
+})
+
 if (tocArticle && tocArticle.parentNode) {
 	tocArticle.parentNode.parentNode.onclick = function (e) {
 		e.stopPropagation()
-		if (document.documentElement.scrollTop !== 0) {
-			if (scTop.length > 0) {
-				scTop.splice(0, 1, document.documentElement.scrollTop);
-			} else {
-				scTop.push(document.documentElement.scrollTop);
-			}
-		}
+		getEleScrollTop();
 		if (document.body.clientWidth <= 800 && Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)) {
 			stopScroll();
 		} else if (document.body.clientWidth <= 800 && tocArticle.scrollTop === 0) {
@@ -47,36 +60,18 @@ if (tocArticle && tocArticle.parentNode) {
 
 tocLink.forEach(i => {
 	i.onclick = function () {
-		if (document.documentElement.scrollTop !== 0) {
-			if (scTop.length > 0) {
-				scTop.splice(0, 1, document.documentElement.scrollTop);
-			} else {
-				scTop.push(document.documentElement.scrollTop);
-			}
-		}
+		getEleScrollTop();
 	}
 })
 
 document.documentElement.onclick = function () {
-	if (document.documentElement.scrollTop !== 0) {
-		if (scTop.length > 0) {
-			scTop.splice(0, 1, document.documentElement.scrollTop);
-		} else {
-			scTop.push(document.documentElement.scrollTop);
-		}
-	}
+	getEleScrollTop();
 	allowScroll();
 }
 
 if (tocArticle) {
 	tocArticle.addEventListener('scroll', function (e) {
-		if (document.documentElement.scrollTop !== 0) {
-			if (scTop.length > 0) {
-				scTop.splice(0, 1, document.documentElement.scrollTop);
-			} else {
-				scTop.push(document.documentElement.scrollTop);
-			}
-		}
+		getEleScrollTop();
 		if (
 			document.body.clientWidth <= 800
 			&& Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)
