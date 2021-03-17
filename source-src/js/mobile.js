@@ -50,9 +50,9 @@ if (tocArticle && tocArticle.parentNode) {
 	tocArticle.parentNode.parentNode.onclick = function (e) {
 		e.stopPropagation()
 		getEleScrollTop();
-		if (document.body.clientWidth <= 800 && Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)) {
+		if (document.body.clientWidth <= 800 && tocArticle.clientHeight >= 288 && Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)) {
 			stopScroll();
-		} else if (document.body.clientWidth <= 800 && tocArticle.scrollTop === 0) {
+		} else if (document.body.clientWidth <= 800 && tocArticle.clientHeight >= 288 && tocArticle.scrollTop === 0) {
 			stopScroll();
 		}
 	}
@@ -73,11 +73,11 @@ if (tocArticle) {
 	tocArticle.addEventListener('scroll', function (e) {
 		getEleScrollTop();
 		if (
-			document.body.clientWidth <= 800
+			document.body.clientWidth <= 800 && tocArticle.clientHeight >= 288
 			&& Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)
 		) {
 			stopScroll();
-		} else if (document.body.clientWidth <= 800 && tocArticle.scrollTop === 0) {
+		} else if (document.body.clientWidth <= 800 && tocArticle.scrollTop === 0 && tocArticle.clientHeight >= 288) {
 			stopScroll();
 		} else if (tocArticle.scrollTop > 0 || tocArticle.scrollHeight - tocArticle.scrollTop < tocArticle.clientHeight) {
 			allowScroll();
