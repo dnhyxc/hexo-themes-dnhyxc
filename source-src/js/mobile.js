@@ -8,97 +8,25 @@ import Fix from './fix'
 
 import { addLoadEvent } from './util'
 
-const tocLink = document.querySelectorAll('.toc-link');
 const tocArticle = document.querySelector('.toc-article');
-const tocLinks = document.querySelectorAll('.toc-link');
-const tocItems = document.querySelectorAll('.toc-item');
 
-let scTop = [];
+let initialClientY;
 
-function allowScroll() {
-	document.body.style.position = 'relative';
-	document.body.style.width = '100%';
-	document.body.style.top = 'auto';
-	document.documentElement.scrollTop = scTop[0];
-}
-
-function stopScroll() {
-	document.body.style.position = 'fixed';
-	document.body.style.width = '100%';
-	document.body.style.top = -1 * scTop[0] + 'px';
-}
-
-function getEleScrollTop(data) {
-	if (data !== 'body') {
-		if (document.documentElement.scrollTop !== 0) {
-			if (scTop.length > 0) {
-				scTop.splice(0, 1, document.documentElement.scrollTop);
-			} else {
-				scTop.push(document.documentElement.scrollTop);
-			}
-		}
-	} else {
-		if (document.documentElement.scrollTop !== 0 && scTop.length > 0) {
-			scTop.splice(0, 1, document.documentElement.scrollTop);
-		} else {
-			scTop.push(document.documentElement.scrollTop);
-		}
-	}
-}
-
-tocItems.forEach(i => {
-	i.onclick = function (e) {
-		getEleScrollTop();
-		e.stopPropagation();
-		allowScroll();
-	}
+tocArticle && tocArticle.addEventListener('touchstart', function (e) {
+	initialClientY = e.targetTouches[0].clientY;
 })
 
-if (tocArticle && tocArticle.parentNode) {
-	tocArticle.parentNode.parentNode.onclick = function (e) {
-		e.stopPropagation()
-		getEleScrollTop();
-		if (document.body.clientWidth <= 800 && tocArticle.clientHeight >= 288 && Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)) {
-			stopScroll();
-		} else if (document.body.clientWidth <= 800 && tocArticle.clientHeight >= 288 && tocArticle.scrollTop === 0) {
-			stopScroll();
-		}
+tocArticle && tocArticle.addEventListener('touchmove', function (event) {
+	const clientY = event.targetTouches[0].clientY - initialClientY;
+	if (tocArticle && tocArticle.scrollTop === 0 && clientY > 0) {
+		return event.preventDefault();
 	}
-}
-
-tocLink.forEach(i => {
-	i.onclick = function (e) {
-		getEleScrollTop();
+	if (tocArticle && (tocArticle.scrollHeight - 1 - tocArticle.scrollTop <= tocArticle.clientHeight) && clientY < 0) {
+		return event.preventDefault();
 	}
+	event.stopPropagation()
+	return true
 })
-
-document.documentElement.onclick = function (e) {
-	e.stopPropagation();
-	getEleScrollTop();
-	allowScroll();
-}
-
-document.body.onscroll = function (e) {
-	e.stopPropagation();
-	getEleScrollTop('body');
-}
-
-if (tocArticle) {
-	tocArticle.addEventListener('scroll', function (e) {
-		e.stopPropagation();
-		getEleScrollTop('tocArticle');
-		if (
-			document.body.clientWidth <= 800 && tocArticle.clientHeight >= 288
-			&& Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)
-		) {
-			stopScroll();
-		} else if (document.body.clientWidth <= 800 && tocArticle.scrollTop === 0 && tocArticle.clientHeight >= 288) {
-			stopScroll();
-		} else if (tocArticle.scrollTop > 0 || tocArticle.scrollHeight - tocArticle.scrollTop < tocArticle.clientHeight) {
-			allowScroll();
-		}
-	});
-}
 
 const btnctnname = document.querySelector('.btnctn-name');
 
@@ -144,6 +72,7 @@ function getElementLeft(element) {
 	}
 	return actualLeft;
 }
+
 function getElementTop(element) {
 	var actualTop = element.offsetTop;
 	var current = element.offsetParent;
