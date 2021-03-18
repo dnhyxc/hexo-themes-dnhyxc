@@ -33,11 +33,6 @@ body,
   user-select: none;
 }
 
-// 更改为白天模式
-// #container {
-//   background-color: #fff;
-// }
-
 #mobile-nav {
   display: none;
 }
@@ -160,3 +155,64 @@ body,
     color: #ffd900;
   }
 }
+
+// #container {
+//   background-color: #dedede;
+
+//   &.show {
+//     background-color: #dedede !important;
+//   }
+
+//   .left-col {
+//     background-color: #fff !important;
+//     border-radius: initial;
+//     box-shadow: initial;
+//   }
+
+//   .mid-col {
+//     .main {
+//       background-color: #fff !important;
+//       border-radius: initial;
+//       box-shadow: initial;
+//     }
+
+//     .article {
+//       background-color: #fff !important;
+//       border-radius: initial;
+//       box-shadow: initial;
+
+//       .article-title {
+//         color: #000 !important;
+//       }
+//     }
+
+//     .article-entry {
+//       h1,
+//       h2,
+//       h3,
+//       h4,
+//       h5,
+//       h6 {
+//         color: #000 !important;
+//       }
+//       p {
+//         color: #000 !important;
+//       }
+//     }
+//   }
+
+//   .archives-wrap {
+//     background-color: #fff !important;
+//   }
+
+//   #footer {
+//     background-color: #fff !important;
+//     opacity: 1;
+
+//     .outer {
+//       background-color: transparent;
+//       border-radius: initial;
+//       box-shadow: initial;
+//     }
+//   }
+// }

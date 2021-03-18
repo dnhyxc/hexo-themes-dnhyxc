@@ -28,9 +28,17 @@ function stopScroll() {
 	document.body.style.top = -1 * scTop[0] + 'px';
 }
 
-function getEleScrollTop() {
-	if (document.documentElement.scrollTop !== 0) {
-		if (scTop.length > 0) {
+function getEleScrollTop(data) {
+	if (data !== 'body') {
+		if (document.documentElement.scrollTop !== 0) {
+			if (scTop.length > 0) {
+				scTop.splice(0, 1, document.documentElement.scrollTop);
+			} else {
+				scTop.push(document.documentElement.scrollTop);
+			}
+		}
+	} else {
+		if (document.documentElement.scrollTop !== 0 && scTop.length > 0) {
 			scTop.splice(0, 1, document.documentElement.scrollTop);
 		} else {
 			scTop.push(document.documentElement.scrollTop);
@@ -59,19 +67,26 @@ if (tocArticle && tocArticle.parentNode) {
 }
 
 tocLink.forEach(i => {
-	i.onclick = function () {
+	i.onclick = function (e) {
 		getEleScrollTop();
 	}
 })
 
-document.documentElement.onclick = function () {
+document.documentElement.onclick = function (e) {
+	e.stopPropagation();
 	getEleScrollTop();
 	allowScroll();
 }
 
+document.body.onscroll = function (e) {
+	e.stopPropagation();
+	getEleScrollTop('body');
+}
+
 if (tocArticle) {
 	tocArticle.addEventListener('scroll', function (e) {
-		getEleScrollTop();
+		e.stopPropagation();
+		getEleScrollTop('tocArticle');
 		if (
 			document.body.clientWidth <= 800 && tocArticle.clientHeight >= 288
 			&& Math.floor(tocArticle.scrollHeight) - Math.floor(tocArticle.scrollTop) === Math.floor(tocArticle.clientHeight)
