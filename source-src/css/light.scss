@@ -8,7 +8,7 @@
 
   .left-col {
     background-color: #fff !important;
-    border-radius: initial;
+    // border-radius: 10px;
     box-shadow: initial;
 
     .intrude-less {
@@ -63,7 +63,7 @@
   .mid-col {
     .main {
       background-color: #fff !important;
-      border-radius: initial;
+      // border-radius: 10px;
       box-shadow: initial;
       color: #333;
     }
@@ -80,8 +80,7 @@
 
     .article {
       background-color: #fff !important;
-      border-radius: initial;
-      border-top-left-radius: 10px;
+      // border-radius: 10px;
       box-shadow: initial;
 
       .article-title {
@@ -160,12 +159,12 @@
   }
 
   #footer {
-    background-color: #fff !important;
-    opacity: 1;
+    background-color: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    opacity: 1 !important;
 
     .outer {
-      background-color: transparent;
-      border-radius: initial;
       box-shadow: initial;
     }
   }
@@ -204,5 +203,12 @@
         color: #333;
       }
     }
+  }
+  .header-menu.tools-nav ul {
+    background-color: #c9c9c9;
+  }
+  .header-menu.tools-nav ul a.active {
+    background: #dedede;
+    color: #333;
   }
 }

@@ -5,7 +5,6 @@ function init() {
   const toolsCol = document.querySelector('.tools-col');
   const btnctn = document.querySelector('.btnctn');
   const intrudeLess = document.querySelector('#intrude-less');
-  const tocContainer = document.querySelector('.toc-container');
 
   function toggleLight() {
     container.classList.toggle('container');
