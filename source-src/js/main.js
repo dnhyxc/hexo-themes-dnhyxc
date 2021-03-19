@@ -30,6 +30,7 @@ document.onreadystatechange = function () {
 	if (document.readyState === "complete") {
 		cover.classList.add('hideCover');
 		document.body.style.position = 'relative';
+		document.body.style.overflow = 'auto';
 		document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
 	} else {
 		document.body.addEventListener('touchmove', stopTouchmove, { passive: false });
