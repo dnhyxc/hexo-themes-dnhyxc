@@ -6,18 +6,20 @@ function init() {
   const btnctn = document.querySelector('.btnctn');
   const intrudeLess = document.querySelector('#intrude-less');
   const tocContainer = document.querySelector('.toc-container');
-  // PC端头像
-  profilepic.onclick = function () {
+
+  function toggleLight() {
     container.classList.toggle('container');
     toolsCol.classList.toggle('lightToolsCol');
+    btnctn.classList.toggle('lightBtnctn');
+    intrudeLess.classList.toggle('lightIntrudeLess');
+  }
+  // PC端头像
+  profilepic.onclick = function () {
+    toggleLight();
   }
   // 移动端头像
   mobileProfilepic.onclick = function () {
-    container.classList.toggle('container');
-    btnctn.classList.toggle('lightBtnctn');
-    intrudeLess.classList.toggle('lightIntrudeLess');
-    console.log(intrudeLess);
-    // tocContainer.classList.toggle('lightTocContainer');
+    toggleLight();
   }
 }
 
