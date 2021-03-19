@@ -1,15 +1,63 @@
-// 白天模式
-#container {
-  background-color: #dedede;
+.container {
+  position: relative;
+  background-color: #eaeaea !important;
 
   &.show {
-    background-color: #dedede !important;
+    background-color: #eaeaea !important;
   }
 
   .left-col {
     background-color: #fff !important;
     border-radius: initial;
     box-shadow: initial;
+
+    .intrude-less {
+      #header {
+        .switch-btn {
+          .tips-box {
+            .tips-text {
+              background-color: #ccc;
+              border-left: none !important;
+              border-right: none !important;
+              &:nth-child(2) {
+                border-top: 1px solid #dedede !important;
+                border-bottom: 1px solid #dedede !important;
+                z-index: 22;
+              }
+              .tips-a {
+                color: #333;
+              }
+              &:hover {
+                background-color: #dedede;
+              }
+            }
+            &::before {
+              border-color: transparent transparent #ccc !important;
+            }
+          }
+        }
+      }
+      .inner {
+        .profilepic {
+          border: 5px solid #ccc !important;
+        }
+        .header-author {
+          a {
+            color: #333 !important;
+          }
+        }
+        .header-menu {
+          .menu-text {
+            background-color: #ccc !important;
+            opacity: 1;
+            box-shadow: 0 0 6px #888 !important;
+            a {
+              color: #333 !important;
+            }
+          }
+        }
+      }
+    }
   }
 
   .mid-col {
@@ -17,35 +65,98 @@
       background-color: #fff !important;
       border-radius: initial;
       box-shadow: initial;
+      color: #333;
+    }
+
+    #scrollTop {
+      border-color: transparent transparent #ccc;
+      &::before {
+        color: #d2e2cd;
+      }
+      &:hover {
+        border-color: transparent transparent #d2e2cd;
+      }
     }
 
     .article {
       background-color: #fff !important;
       border-radius: initial;
+      border-top-left-radius: 10px;
       box-shadow: initial;
 
       .article-title {
-        color: #000 !important;
+        color: #333 !important;
+      }
+      .article-entry {
+        blockquote {
+          background: #d2e2cd;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: #333 !important;
+        }
+        h3 {
+          border-bottom: 5px solid #ccc;
+        }
+        p {
+          color: #333 !important;
+          code {
+            background: yellowgreen;
+          }
+        }
+        ul {
+          li {
+            color: #333;
+          }
+        }
+      }
+      .article-info {
+        border-top: 5px solid #ccc;
+        .article-more-link {
+          .article-more-a {
+            color: #333;
+            box-shadow: 0 0 3px #c9d9d9;
+            &:hover {
+              background-color: #ccc;
+            }
+          }
+        }
       }
     }
 
-    .article-entry {
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: #000 !important;
-      }
-      p {
-        color: #000 !important;
+    .wrap-side-operation {
+      .mod-side-operation {
+        .toc-container {
+          background-color: transparent;
+          box-shadow: 0 0 10px #999;
+        }
       }
     }
   }
 
   .archives-wrap {
     background-color: #fff !important;
+    .archive-year-wrap {
+      background-color: #eee;
+      .archive-year {
+        color: #333;
+      }
+    }
+    .archives {
+      .archive-article-title {
+        color: #333;
+      }
+
+      .archive-article-inner {
+        .archive-article-header {
+          background-color: #eee;
+        }
+      }
+    }
   }
 
   #footer {
@@ -56,6 +167,42 @@
       background-color: transparent;
       border-radius: initial;
       box-shadow: initial;
+    }
+  }
+}
+
+.lightToolsCol {
+  .tools-section {
+    background-color: #fff;
+    color: #333;
+    box-shadow: none;
+    .search-wrap {
+      .icon {
+        color: #ccc;
+      }
+      .search-ipt {
+        color: #333;
+        border-bottom: 2px solid #ccc;
+        font-family: initial;
+        &::-webkit-input-placeholder {
+          color: #ccc;
+        }
+      }
+    }
+    .search-ul {
+      .search-title {
+        color: #333;
+        .icon {
+          margin-right: 10px;
+          color: #333;
+        }
+      }
+      .search-time {
+        color: #333;
+      }
+      .search-tag {
+        color: #333;
+      }
     }
   }
 }

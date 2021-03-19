@@ -1,0 +1,27 @@
+.lightBtnctn {
+  background-color: #dedede;
+}
+.lightIntrudeLess {
+  .inner {
+    .atthorName {
+      h1 {
+        color: #000 !important;
+      }
+    }
+    .header-menu {
+      ul {
+        background-color: #c9c9c9;
+        li {
+          a {
+            background-color: #cfcfcf;
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+.toc-container {
+  background-color: transparent;
+  box-shadow: none !important;
+}

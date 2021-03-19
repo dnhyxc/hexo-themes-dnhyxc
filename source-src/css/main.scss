@@ -19,8 +19,9 @@
 @import "./aside";
 @import "./tooltip";
 @import "./footer";
-@import "./light.scss";
+@import "./light";
 @media screen and (max-width: 800px) {
   @import "./mobile";
   @import "./mobile-slider";
+  @import "./mobile-light";
 }
