@@ -25,5 +25,10 @@ document.onreadystatechange = function () {
 	ChangeLight.init()
 	if (document.readyState === "complete") {
 		cover.classList.add('hideCover');
+		document.body.style.position = 'relative';
+	} else {
+		document.body.addEventListener('touchmove', function (e) {
+			e.preventDefault();
+		}, { passive: false });
 	}
 }
