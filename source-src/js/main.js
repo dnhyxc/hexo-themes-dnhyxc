@@ -17,5 +17,8 @@ addLoadEvent(function () {
 	Share.init()
 	Viewer.init()
 	Aside.init()
-	ChangeLight.init()
 })
+
+document.onreadystatechange = function () {
+	ChangeLight.init()
+}

@@ -7,10 +7,10 @@ function init() {
   const intrudeLess = document.querySelector('#intrude-less');
 
   function toggleLight() {
-    container.classList.toggle('container');
-    toolsCol.classList.toggle('lightToolsCol');
-    btnctn.classList.toggle('lightBtnctn');
-    intrudeLess.classList.toggle('lightIntrudeLess');
+    container.classList.toggle('container')
+    toolsCol.classList.toggle('lightToolsCol')
+    btnctn.classList.toggle('lightBtnctn')
+    intrudeLess.classList.toggle('lightIntrudeLess')
   }
   // PC端头像
   profilepic.onclick = function () {
