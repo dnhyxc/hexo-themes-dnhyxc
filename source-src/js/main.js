@@ -14,11 +14,16 @@ import ChangeLight from './changelight'
 import { addLoadEvent } from './util'
 
 addLoadEvent(function () {
-	Share.init()
-	Viewer.init()
+	// Share.init()
+	// Viewer.init()
 	Aside.init()
 })
 
+const cover = document.querySelector('.cover');
+
 document.onreadystatechange = function () {
 	ChangeLight.init()
+	if (document.readyState === "complete") {
+		cover.classList.add('hideCover');
+	}
 }
