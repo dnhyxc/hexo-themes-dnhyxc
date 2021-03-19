@@ -21,14 +21,17 @@ addLoadEvent(function () {
 
 const cover = document.querySelector('.cover');
 
+function stopTouchmove(e) {
+	e.preventDefault();
+}
+
 document.onreadystatechange = function () {
 	ChangeLight.init()
 	if (document.readyState === "complete") {
 		cover.classList.add('hideCover');
 		document.body.style.position = 'relative';
+		document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
 	} else {
-		document.body.addEventListener('touchmove', function (e) {
-			e.preventDefault();
-		}, { passive: false });
+		document.body.addEventListener('touchmove', stopTouchmove, { passive: false });
 	}
 }
