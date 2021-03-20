@@ -15,7 +15,7 @@ import { addLoadEvent } from './util'
 
 addLoadEvent(function () {
 	// Share.init()
-	// Viewer.init()
+	Viewer.init()
 	Aside.init()
 })
 
