@@ -19,10 +19,7 @@ let tipsAs = tipsBox.querySelectorAll('.tips-a');
 let wrapper = document.querySelector('#wrapper');
 let main = document.querySelector('.main');
 let scrollTop = document.querySelector('#scrollTop');
-let mobileNav = document.querySelector('#mobile-nav');
 let bodyScroll = document.body;
-
-console.log(mobileNav.clientHeight);
 
 homeIcon.onclick = function (e) {
 	e.stopPropagation();

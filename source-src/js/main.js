@@ -13,13 +13,14 @@ import ChangeLight from './changelight'
 
 import { addLoadEvent } from './util'
 
+const cover = document.querySelector('.cover');
+const hideCoverBtn = document.querySelector('.hideCoverBtn');
+
 addLoadEvent(function () {
 	// Share.init()
 	Viewer.init()
 	Aside.init()
 })
-
-const cover = document.querySelector('.cover');
 
 function stopTouchmove(e) {
 	e.preventDefault();
@@ -27,12 +28,18 @@ function stopTouchmove(e) {
 
 document.onreadystatechange = function () {
 	if (document.readyState === "complete") {
-		// ChangeLight.init()
-		// cover.classList.add('hideCover');
-		// document.body.style.position = 'relative';
-		// document.body.style.overflow = 'auto';
-		// document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
+		ChangeLight.init()
+		cover.classList.add('hideCover');
+		document.body.style.position = 'relative';
+		document.body.style.overflow = 'auto';
+		document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
 	} else {
-		// document.body.addEventListener('touchmove', stopTouchmove, { passive: false });
+		hideCoverBtn.addEventListener('click', function () {
+			setTimeout(() => {
+				cover.classList.add('hideCover');
+			}, 1000)
+			console.log(cover);
+		})
+		document.body.addEventListener('touchmove', stopTouchmove, { passive: false });
 	}
 }
