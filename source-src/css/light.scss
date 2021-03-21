@@ -1,6 +1,13 @@
 .container {
   position: relative;
-  background-color: #eaeaea !important;
+  background: #ebebeb !important;
+  // background-image: linear-gradient(-225deg, #dfe9f3 0%, white 100%) !important;
+  background-image: linear-gradient(
+    to top,
+    #c4c5c7 0%,
+    #dcdddf 52%,
+    #ebebeb 100%
+  ) !important;
 
   &.show {
     .anm-canvas {
@@ -14,8 +21,9 @@
   }
 
   .left-col {
-    background-color: #fff !important;
-    // border-radius: 10px;
+    // background-color: #fff !important;
+    // background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    background-image: linear-gradient(to bottom, #fffeff 0%, #d7fffe 100%);
     box-shadow: initial;
 
     .intrude-less {
@@ -23,30 +31,39 @@
         .switch-btn {
           .tips-box {
             .tips-text {
-              background-color: #ccc;
+              background-image: linear-gradient(
+                -20deg,
+                #fff1eb 0%,
+                #ace0f9 100%
+              );
               border-left: none !important;
               border-right: none !important;
               &:nth-child(2) {
-                border-top: 1px solid #dedede !important;
-                border-bottom: 1px solid #dedede !important;
+                border-top: 1px solid #c9d9d9 !important;
+                border-bottom: 1px solid #c9d9d9 !important;
                 z-index: 22;
               }
               .tips-a {
                 color: #333;
               }
               &:hover {
-                background-color: #dedede;
+                background-color: #f7f6e2 !important;
+                background-image: linear-gradient(
+                  to right,
+                  #fff1eb 0%,
+                  #ace0f9 100%
+                );
               }
             }
             &::before {
-              border-color: transparent transparent #ccc !important;
+              border-color: transparent transparent #ace0f9 !important;
             }
           }
         }
       }
       .inner {
         .profilepic {
-          border: 5px solid #ccc !important;
+          border: 5px solid #d7fffe !important;
         }
         .header-author {
           a {
@@ -55,11 +72,18 @@
         }
         .header-menu {
           .menu-text {
-            background-color: #ccc !important;
+            background-image: linear-gradient(-20deg, #fff1eb 0%, #ace0f9 100%);
             opacity: 1;
-            box-shadow: 0 0 6px #888 !important;
+            box-shadow: 0 0 6px #c9d9d9 !important;
             a {
               color: #333 !important;
+            }
+            &:hover {
+              background-image: linear-gradient(
+                to right,
+                #fff1eb 0%,
+                #ace0f9 100%
+              );
             }
           }
         }
@@ -87,7 +111,6 @@
 
     .article {
       background-color: #fff !important;
-      // border-radius: 10px;
       box-shadow: initial;
 
       .article-title {
@@ -166,13 +189,13 @@
   }
 
   #footer {
-    background-color: #fff;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     opacity: 1 !important;
 
     .outer {
       box-shadow: initial;
+      background-color: #fff;
     }
   }
 }

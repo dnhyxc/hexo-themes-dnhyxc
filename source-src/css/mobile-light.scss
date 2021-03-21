@@ -1,5 +1,7 @@
 .lightBtnctn {
-  background-color: #dedede;
+  background-color: transparent;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  box-shadow: 0 1px 6px #fff;
 }
 .lightIntrudeLess {
   .inner {
@@ -10,14 +12,25 @@
     }
     .header-menu {
       ul {
-        background-color: #c9c9c9 !important;
+        background-color: #eefefe !important;
         li {
           a {
             background-color: #cfcfcf;
+            // background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+            background-image: linear-gradient(
+              -225deg,
+              #fffeff 0%,
+              #d7fffe 100%
+            );
             box-shadow: none !important;
+            color: #333 !important;
             &.active {
-              color: #333 !important;
-              background-color: #dedede;
+              color: #f2ac4e !important;
+              background-image: linear-gradient(
+                to top,
+                #fffeff 0%,
+                #d7fffe 100%
+              );
             }
           }
         }
@@ -28,4 +41,11 @@
 .toc-container {
   background-color: transparent;
   box-shadow: none !important;
+}
+
+.container #footer {
+  .outer {
+    box-shadow: initial;
+    background-color: transparent;
+  }
 }
