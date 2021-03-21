@@ -9,10 +9,30 @@ body {
     background-size: 150% 150%;
     .loading {
       font-size: 3rem;
+      padding: 0 20px;
       &::after {
         clip-path: circle(30px at 0% 30%);
         animation: move 5s infinite;
+        padding: 0 20px;
       }
+      .btnBorder {
+        &:nth-child(1) {
+          height: 5px;
+        }
+        &:nth-child(2) {
+          width: 5px;
+        }
+        &:nth-child(3) {
+          height: 5px;
+        }
+        &:nth-child(4) {
+          width: 5px;
+        }
+      }
+    }
+
+    .hideCoverBtn {
+      white-space: nowrap;
     }
   }
 
