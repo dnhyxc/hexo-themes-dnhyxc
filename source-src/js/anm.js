@@ -79,9 +79,8 @@ function init() {
             const r = Math.floor(Math.random() * 256);
             const g = Math.floor(Math.random() * 256);
             const b = Math.floor(Math.random() * 256);
-            return `rgb(${r}, ${g}, ${b})`;
+            return `rgba(${r}, ${g}, ${b}, 0.6)`;
         };
-
         this.draw = function () {
             if (_this.alpha <= 0) {
                 init();
@@ -91,7 +90,7 @@ function init() {
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, 2 * Math.PI, false);
             ctx.fillStyle = randomColor();
-            // ctx.fillStyle = 'rgba(255,255,255,'+ _this.alpha+')';
+            // ctx.fillStyle = 'rgba(255,255,255,' + _this.alpha + ')';
             ctx.fill();
         };
     }

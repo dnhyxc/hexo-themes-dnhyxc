@@ -3,6 +3,13 @@
   background-color: #eaeaea !important;
 
   &.show {
+    .anm-canvas {
+      display: none !important;
+      position: fixed;
+    }
+  }
+
+  &.show {
     background-color: #eaeaea !important;
   }
 
