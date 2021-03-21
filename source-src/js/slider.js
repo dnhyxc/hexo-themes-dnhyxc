@@ -19,7 +19,10 @@ let tipsAs = tipsBox.querySelectorAll('.tips-a');
 let wrapper = document.querySelector('#wrapper');
 let main = document.querySelector('.main');
 let scrollTop = document.querySelector('#scrollTop');
+let mobileNav = document.querySelector('#mobile-nav');
 let bodyScroll = document.body;
+
+console.log(mobileNav.clientHeight);
 
 homeIcon.onclick = function (e) {
 	e.stopPropagation();
@@ -177,10 +180,10 @@ function init() {
 				setScrollZero()
 				if (app.isShow && bodyScroll.clientWidth <= 800) {
 					elScrollTop = document.documentElement.scrollTop;
-					// bodyScroll.style.position = 'fixed';
-					// bodyScroll.style.top = elScrollTop * -1 + 'px';
 					document.querySelector('#container').style.position = 'fixed';
-					document.querySelector('#container').style.top = elScrollTop * -1 + 'px';
+					if (elScrollTop) {
+						document.querySelector('#container').style.top = -(elScrollTop) + 'px';
+					}
 				}
 			}
 		},
@@ -268,8 +271,6 @@ function init() {
 	document.querySelector('#container').onclick = (e) => {
 		if (app.isShow) {
 			app.$set('isShow', false)
-			// bodyScroll.style.position = 'relative';
-			// bodyScroll.style.top = '0px';
 			document.querySelector('#container').style.position = 'relative';
 			document.querySelector('#container').style.top = '0px';
 			document.documentElement.scrollTop = elScrollTop;
@@ -322,8 +323,6 @@ function init() {
 		if (direction === 3) {
 			if (app.isShow) {
 				app.$set('isShow', false)
-				// bodyScroll.style.position = 'relative';
-				// bodyScroll.style.top = '0px';
 				document.querySelector('#container').style.position = 'relative';
 				document.querySelector('#container').style.top = '0px';
 				document.documentElement.scrollTop = elScrollTop;
