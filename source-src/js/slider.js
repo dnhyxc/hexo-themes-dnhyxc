@@ -177,8 +177,10 @@ function init() {
 				setScrollZero()
 				if (app.isShow && bodyScroll.clientWidth <= 800) {
 					elScrollTop = document.documentElement.scrollTop;
-					bodyScroll.style.position = 'fixed';
-					bodyScroll.style.top = elScrollTop * -1 + 'px';
+					// bodyScroll.style.position = 'fixed';
+					// bodyScroll.style.top = elScrollTop * -1 + 'px';
+					document.querySelector('#container').style.position = 'fixed';
+					document.querySelector('#container').style.top = elScrollTop * -1 + 'px';
 				}
 			}
 		},
@@ -266,8 +268,10 @@ function init() {
 	document.querySelector('#container').onclick = (e) => {
 		if (app.isShow) {
 			app.$set('isShow', false)
-			bodyScroll.style.position = 'relative';
-			bodyScroll.style.top = '0px';
+			// bodyScroll.style.position = 'relative';
+			// bodyScroll.style.top = '0px';
+			document.querySelector('#container').style.position = 'relative';
+			document.querySelector('#container').style.top = '0px';
 			document.documentElement.scrollTop = elScrollTop;
 			setTimeout(() => {
 				app.$set('isCtnShow', false)
@@ -318,8 +322,10 @@ function init() {
 		if (direction === 3) {
 			if (app.isShow) {
 				app.$set('isShow', false)
-				bodyScroll.style.position = 'relative';
-				bodyScroll.style.top = '0px';
+				// bodyScroll.style.position = 'relative';
+				// bodyScroll.style.top = '0px';
+				document.querySelector('#container').style.position = 'relative';
+				document.querySelector('#container').style.top = '0px';
 				document.documentElement.scrollTop = elScrollTop;
 				setTimeout(() => {
 					app.$set('isCtnShow', false)
