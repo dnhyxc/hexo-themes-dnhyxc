@@ -26,13 +26,13 @@ function stopTouchmove(e) {
 }
 
 document.onreadystatechange = function () {
-	ChangeLight.init()
 	if (document.readyState === "complete") {
-		cover.classList.add('hideCover');
-		document.body.style.position = 'relative';
-		document.body.style.overflow = 'auto';
-		document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
+		// ChangeLight.init()
+		// cover.classList.add('hideCover');
+		// document.body.style.position = 'relative';
+		// document.body.style.overflow = 'auto';
+		// document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
 	} else {
-		document.body.addEventListener('touchmove', stopTouchmove, { passive: false });
+		// document.body.addEventListener('touchmove', stopTouchmove, { passive: false });
 	}
 }

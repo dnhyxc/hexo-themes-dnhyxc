@@ -20,14 +20,6 @@ body {
       #e0c3fc,
       #d1e8f3
     );
-    // background: linear-gradient(
-    //   135deg,
-    //   hsl(110deg, 80%, 70%),
-    //   hsl(190deg, 80%, 70%),
-    //   hsl(100deg, 80%, 70%),
-    //   hsl(520deg, 80%, 70%),
-    //   hsl(60deg, 80%, 70%)
-    // );
     background-size: 200% 200%;
     animation: bgmove 5s infinite;
 
@@ -64,7 +56,153 @@ body {
         animation: move 5s infinite;
       }
     }
+
+    .hideCoverBtn {
+      display: inline-block;
+      padding: 20px 30px;
+      color: #03e9f4;
+      text-decoration: none;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      position: relative;
+      // overflow: hidden;
+
+      transition: 0.5s;
+      margin: 40px 0;
+      border-radius: 10px;
+      z-index: 1;
+      cursor: pointer;
+      // -webkit-box-reflect: below -5px linear-gradient(transparent, #000);
+      &:hover::before {
+        animation: sun 2s infinite;
+      }
+      &:hover {
+        &::before {
+          content: "";
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          bottom: -5px;
+          left: -5px;
+          background: linear-gradient(
+            90deg,
+            #03a9f4,
+            #f441a5,
+            #ffeb3b,
+            #03a9f4
+          );
+          filter: blur(10px);
+          background-size: 200%;
+          border-radius: 10px;
+          z-index: -1;
+        }
+        background-image: linear-gradient(
+          90deg,
+          #03a9f4,
+          #f441a5,
+          #ffeb3b,
+          #03a9f4
+        );
+        background-size: 400%;
+        color: #fff;
+        animation: sun 2s infinite;
+      }
+      .btnBorder {
+        position: absolute;
+        &:nth-child(1) {
+          width: 100%;
+          height: 5px;
+          top: 0;
+          left: 0;
+          background: linear-gradient(to right, transparent, #ffeb3b);
+          animation: animate1 2s linear infinite;
+          animation-delay: 0s;
+        }
+        @keyframes animate1 {
+          0% {
+            left: -100%;
+          }
+          50%,
+          100% {
+            left: 100%;
+          }
+        }
+        &:nth-child(2) {
+          width: 5px;
+          height: 100%;
+          top: -100%;
+          right: 0;
+          background: linear-gradient(to bottom, transparent, #9bfbc1);
+          animation: animate2 2s linear infinite;
+          // animation-delay: 0.5s;
+          animation-delay: 0s;
+        }
+
+        @keyframes animate2 {
+          0% {
+            top: -100%;
+          }
+          50%,
+          100% {
+            top: 100%;
+          }
+        }
+        &:nth-child(3) {
+          width: 100%;
+          height: 5px;
+          bottom: 0;
+          right: -100%;
+          background: linear-gradient(to left, transparent, #add5ff);
+          animation: animate3 2s linear infinite;
+          // animation-delay: 1s;
+          animation-delay: 0s;
+        }
+
+        @keyframes animate3 {
+          0% {
+            right: -100%;
+          }
+          50%,
+          100% {
+            right: 100%;
+          }
+        }
+        &:nth-child(4) {
+          width: 5px;
+          height: 100%;
+          bottom: -100%;
+          left: 0;
+          background-image: linear-gradient(to top, transparent, #fed6e3);
+          animation: animate4 2s linear infinite;
+          // animation-delay: 1.5s;
+          animation-delay: 0s;
+        }
+
+        @keyframes animate4 {
+          0% {
+            bottom: -100%;
+          }
+          50%,
+          100% {
+            bottom: 100%;
+          }
+        }
+      }
+    }
   }
+
+  @keyframes sun {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: -400% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
   @keyframes bgmove {
     0% {
       background-position: 0% 0%;
