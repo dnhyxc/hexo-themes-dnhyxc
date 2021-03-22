@@ -5,6 +5,7 @@ function init() {
   const btnctn = document.querySelector('.btnctn');
   const intrudeLess = document.querySelector('#intrude-less');
   const dark = document.querySelector('.dark');
+  const mobileDark = document.querySelector('.mobileDark');
 
   function toggleLight() {
     if (container.getAttribute('class') === 'container') {
@@ -42,13 +43,20 @@ function init() {
       dark.classList.add('light');
       sessionStorage.setItem('light', true);
     }
+    if (mobileDark.getAttribute('class').includes('mobileLight')) {
+      mobileDark.classList.remove('mobileLight');
+      sessionStorage.removeItem('mobileLight');
+    } else {
+      mobileDark.classList.add('mobileLight');
+      sessionStorage.setItem('mobileLight', true);
+    }
   }
   // PC端头像
   dark.onclick = function () {
     toggleLight();
   }
   // 移动端头像
-  mobileProfilepic.onclick = function () {
+  mobileDark.onclick = function () {
     toggleLight();
   }
 
@@ -77,6 +85,23 @@ function init() {
   } else {
     intrudeLess.classList.remove('lightIntrudeLess');
   }
+  if (sessionStorage.getItem('mobileLight')) {
+    mobileDark.classList.add('mobileLight');
+  } else {
+    mobileDark.classList.remove('mobileLight');
+  }
+
+  let timer;
+  document.body.onscroll = function () {
+    mobileDark.style.opacity = '1';
+    mobileDark.style.transition = 'all 0.5s';
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      mobileDark.style.opacity = '0';
+      mobileDark.style.transition = 'all 0.5s';
+    }, 2000);
+  }
+
 }
 
 module.exports = {
