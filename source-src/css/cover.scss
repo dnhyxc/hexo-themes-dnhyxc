@@ -1,6 +1,9 @@
 body {
+  position: relative;
+  width: 100%;
+  height: 100%;
   .cover {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -192,6 +195,12 @@ body {
     }
   }
 
+  .hideCover {
+    opacity: 0;
+    z-index: 0;
+    transition: all 1s;
+  }
+
   @keyframes sun {
     0% {
       background-position: 0% 0%;
@@ -226,11 +235,5 @@ body {
     100% {
       clip-path: circle(100px at 0% 50%);
     }
-  }
-
-  .hideCover {
-    opacity: 0;
-    z-index: 0;
-    transition: all 1s;
   }
 }

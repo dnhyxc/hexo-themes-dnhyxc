@@ -32,7 +32,8 @@ document.onreadystatechange = function () {
 		cover.classList.add('hideCover');
 		if (document.body.clientWidth <= 800) {
 			document.body.style.position = 'relative';
-			document.body.style.overflow = 'auto';
+			// document.body.style.overflow = 'auto';
+			document.body.style.width = '100%';
 			document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
 		}
 	} else {
