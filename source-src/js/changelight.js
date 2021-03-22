@@ -1,10 +1,10 @@
 function init() {
   const container = document.querySelector('#container');
-  const profilepic = document.querySelector('.profilepic');
   const mobileProfilepic = document.querySelector('#profilepic');
   const toolsCol = document.querySelector('.tools-col');
   const btnctn = document.querySelector('.btnctn');
   const intrudeLess = document.querySelector('#intrude-less');
+  const dark = document.querySelector('.dark');
 
   function toggleLight() {
     if (container.getAttribute('class') === 'container') {
@@ -35,9 +35,16 @@ function init() {
       intrudeLess.classList.add('lightIntrudeLess');
       sessionStorage.setItem('lightIntrudeLess', true);
     }
+    if (dark.getAttribute('class').includes('light')) {
+      dark.classList.remove('light');
+      sessionStorage.removeItem('light');
+    } else {
+      dark.classList.add('light');
+      sessionStorage.setItem('light', true);
+    }
   }
   // PC端头像
-  profilepic.onclick = function () {
+  dark.onclick = function () {
     toggleLight();
   }
   // 移动端头像
@@ -45,6 +52,11 @@ function init() {
     toggleLight();
   }
 
+  if (sessionStorage.getItem('light')) {
+    dark.classList.add('light');
+  } else {
+    dark.classList.remove('light');
+  }
   if (sessionStorage.getItem('container')) {
     container.classList.add('container');
   } else {
