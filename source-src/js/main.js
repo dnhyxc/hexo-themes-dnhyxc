@@ -30,15 +30,16 @@ document.onreadystatechange = function () {
 	if (document.readyState === "complete") {
 		ChangeLight.init()
 		cover.classList.add('hideCover');
-		document.body.style.position = 'relative';
-		document.body.style.overflow = 'auto';
-		document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
+		if (document.body.clientWidth <= 800) {
+			document.body.style.position = 'relative';
+			document.body.style.overflow = 'auto';
+			document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
+		}
 	} else {
 		hideCoverBtn.addEventListener('click', function () {
 			setTimeout(() => {
 				cover.classList.add('hideCover');
 			}, 1000)
-			console.log(cover);
 		})
 		document.body.addEventListener('touchmove', stopTouchmove, { passive: false });
 	}
