@@ -92,19 +92,6 @@ function init() {
   }
 
   let timer;
-
-  mobileDark.addEventListener('touchstart', function () {
-    clearTimeout(timer);
-    mobileDark.style.opacity = '1';
-    mobileDark.style.transition = 'all 0.5s';
-  })
-
-  mobileDark.addEventListener('touchend', function () {
-    clearTimeout(timer);
-    mobileDark.style.opacity = '0';
-    mobileDark.style.transition = 'all 0.5s';
-  })
-
   document.body.onscroll = function () {
     mobileDark.style.opacity = '1';
     mobileDark.style.transition = 'all 0.5s';
