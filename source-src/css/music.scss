@@ -12,12 +12,12 @@
       left: 19px;
       z-index: 0;
       opacity: 0;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     .hideLrc {
       opacity: 1;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     .aplayer-list {
@@ -47,6 +47,7 @@
       border-radius: 10px;
       left: -55px;
       visibility: hidden;
+      transition: all 0.3s ease;
 
       .aplayer-miniswitcher {
         visibility: visible;
@@ -56,14 +57,21 @@
         // border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .aplayer-music {
+        color: #666;
       }
     }
 
     .showBody {
       visibility: visible;
       left: 20px;
+      transition: all 0.3s ease;
       .aplayer-pic {
         visibility: visible;
+        transition: all 0.3s ease;
       }
     }
   }
