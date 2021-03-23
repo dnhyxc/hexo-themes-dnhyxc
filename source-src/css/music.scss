@@ -1,5 +1,5 @@
 .music {
-  position: fixed;
+  position: absolute;
 
   .aplayer.aplayer-fixed {
     max-width: 261px;
@@ -11,6 +11,13 @@
       bottom: 90px;
       left: 19px;
       z-index: 0;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .hideLrc {
+      opacity: 1;
+      transition: all 0.3s ease;
     }
 
     .aplayer-list {
@@ -36,12 +43,27 @@
     .aplayer-body {
       max-width: 261px;
       left: 20px;
-      bottom: 20px;
+      bottom: 22px;
       border-radius: 10px;
+      left: -55px;
+      visibility: hidden;
+
+      .aplayer-miniswitcher {
+        visibility: visible;
+      }
 
       .aplayer-pic {
-        border-top-left-radius: 10px;
+        // border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+        visibility: hidden;
+      }
+    }
+
+    .showBody {
+      visibility: visible;
+      left: 20px;
+      .aplayer-pic {
+        visibility: visible;
       }
     }
   }
@@ -52,7 +74,7 @@
 
     .aplayer-miniswitcher {
       border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
+      // border-bottom-right-radius: 10px;
     }
   }
 }
