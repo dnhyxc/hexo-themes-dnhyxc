@@ -1,0 +1,58 @@
+.music {
+  position: fixed;
+
+  .aplayer.aplayer-fixed {
+    max-width: 261px;
+    left: 20px;
+    bottom: 20px;
+
+    .aplayer-lrc {
+      max-width: 280px;
+      bottom: 90px;
+      left: 19px;
+      z-index: 0;
+    }
+
+    .aplayer-list {
+      position: relative;
+      border: none;
+      max-height: 261px;
+      background-color: #333;
+      z-index: 88;
+      ol {
+        li {
+          color: #c9c9c9;
+        }
+        li.aplayer-list-light {
+          background: #888;
+          color: gold;
+        }
+        li:hover {
+          background: #666;
+        }
+      }
+    }
+
+    .aplayer-body {
+      max-width: 261px;
+      left: 20px;
+      bottom: 20px;
+      border-radius: 10px;
+
+      .aplayer-pic {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+    }
+  }
+
+  .aplayer {
+    background: transparent;
+    display: block;
+
+    .aplayer-miniswitcher {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}

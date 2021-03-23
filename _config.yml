@@ -198,3 +198,8 @@ declare:
   licensee_name: "CC BY-NC-SA 4.0" #版权协议的名称
   licensee_alias: "知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" # alias别名
   # licensee_img: /img/declare.png #版权协议的Logo
+
+# 添加APlayer音乐播放器，官网：https://aplayer.js.org
+# github: https://github.com/MoePlayer/APlayer
+aplayer:
+  enable: true
