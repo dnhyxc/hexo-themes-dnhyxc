@@ -21,28 +21,39 @@ let main = document.querySelector('.main');
 let scrollTop = document.querySelector('#scrollTop');
 let bodyScroll = document.body;
 
+const aplayer = document.querySelector('.aplayer');
+
 homeIcon.onclick = function (e) {
 	e.stopPropagation();
 	if (tipsBox.classList.value === 'tips-box') {
 		tipsBox.classList.add("tip-show");
+		aplayer.style.opacity = 0;
+		aplayer.style.transition = 'all 0.3s ease';
 	} else {
 		tipsBox.classList.remove("tip-show");
+		aplayer.style.opacity = 1;
+		aplayer.style.transition = 'all 0.3s ease';
 	}
 }
 homeIcon.onmouseover = function (e) {
 	tipsBox.classList.add("tip-show");
+	aplayer.style.opacity = 0;
+	aplayer.style.transition = 'all 0.3s ease';
 }
 leftCol.onclick = function () {
 	tipsBox.classList.remove("tip-show");
+	aplayer.style.opacity = 1;
+	aplayer.style.transition = 'all 0.3s ease';
 }
 tipsAs.forEach(i => {
 	i.onclick = function () {
 		tipsBox.classList.remove("tip-show");
+		aplayer.style.opacity = 1;
+		aplayer.style.transition = 'all 0.3s ease';
 	}
 })
 
 scrollTop.onclick = function () {
-	// wrapper.scrollTop = 0;
 	const clock = setInterval(function () {
 		if (wrapper.scrollTop !== 0) {
 			wrapper.scrollTop -= Math.fround(wrapper.scrollTop / 10);
