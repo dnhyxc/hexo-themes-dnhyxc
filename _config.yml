@@ -169,7 +169,7 @@ busuanzi:
 
 # gitalk 评论
 gitalk:
-  enable: true
+  enable: false
   owner: dnhyxc
   admin: dnhyxc
   repo: dnhyxc.github.io
@@ -203,3 +203,4 @@ declare:
 # github: https://github.com/MoePlayer/APlayer
 aplayer:
   enable: true
+  asset_inject: false

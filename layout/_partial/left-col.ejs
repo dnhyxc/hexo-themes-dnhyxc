@@ -57,22 +57,21 @@
           </a> -->
           <%}%>
 			</div>
-		</nav>
-      <div class="toggleLight">
+    </nav>
+    <div class="toggleLight">
         <span class="dark">黑夜</span>
-      </div>
-      <div class="motto">
-        <div>行 到 水 穷 处</div>
-        <div>坐 看 云 起 时</div>
-      </div>
-      <div class="music">
-        <!-- 《左侧边栏添加--APlayer音乐播放器 -->
-      <% if(theme.aplayer.enable) { %>
+    </div>
+    <div class="motto">
+      <div>行 到 水 穷 处</div>
+      <div>坐 看 云 起 时</div>
+    </div>
+    <div class="music">
+      <!-- 《左侧边栏添加--APlayer音乐播放器 -->
+    <% if(theme.aplayer.enable) { %>
           <link rel="stylesheet" href="/dist/APlayer.min.css">
           <div id="aplayer"></div>
           <script type="text/javascript" src="/dist/APlayer.min.js"></script>
           <script type="text/javascript" src="/dist/music.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
           <% } %>
       </div>
   </header>
