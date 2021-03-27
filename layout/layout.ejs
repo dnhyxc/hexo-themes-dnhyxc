@@ -6,6 +6,11 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
+      <% if(theme.aplayer.enable) { %>
+      <link rel="stylesheet" href="/dist/APlayer.min.css">
+      <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+      <script type="text/javascript" src="/dist/music.js"></script>
+      <% } %>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       <div class="main">loading...</div>
