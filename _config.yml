@@ -119,9 +119,11 @@ gitment_oauth:
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
   # 头像上面的背景颜色
-  header: "background-color: rgba(225,225,225,0)"
+  # header: "background-color: rgba(225,225,225,0)"
   # 右滑板块背景
-  slider: "#292929"
+  slider: "background-image: linear-gradient(-45deg, #2b5876 0%, #4e4376 100%)"
+  btnctn: "background-image: linear-gradient(-225deg, #2b5876 0%, #4e4376 100%)"
+  tocContent: "background-image: linear-gradient(to top, #09203f 0%, #537895 100%)"
 
 # slider的设置
 slider:

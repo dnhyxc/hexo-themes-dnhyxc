@@ -4,6 +4,7 @@ function init() {
   const btnctn = document.querySelector('.btnctn');
   const intrudeLess = document.querySelector('#intrude-less');
   const dark = document.querySelector('.dark');
+  const toggleMusic = document.querySelector('.toggleMusic');
   const mobileDark = document.querySelector('.mobileDark');
 
   function toggleLight() {
@@ -44,6 +45,11 @@ function init() {
       dark.innerHTML = '白天';
       sessionStorage.setItem('light', true);
     }
+    if (toggleMusic.getAttribute('class').includes('light')) {
+      toggleMusic.classList.remove('light');
+    } else {
+      toggleMusic.classList.add('light');
+    }
     if (mobileDark.getAttribute('class').includes('mobileLight')) {
       mobileDark.classList.remove('mobileLight');
       mobileDark.innerHTML = '黑夜';
@@ -65,9 +71,11 @@ function init() {
 
   if (sessionStorage.getItem('light')) {
     dark.classList.add('light');
+    toggleMusic.classList.add('light');
     dark.innerHTML = '白天';
   } else {
     dark.classList.remove('light');
+    toggleMusic.classList.remove('light');
     dark.innerHTML = '黑夜';
   }
   if (sessionStorage.getItem('mobileLight')) {

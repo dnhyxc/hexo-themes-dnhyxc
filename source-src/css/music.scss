@@ -67,8 +67,9 @@
       max-width: 261px;
       left: 20px;
       bottom: 22px;
-      border-radius: 15px;
-      left: -56px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      left: -66px;
       visibility: hidden;
       transition: all 0.3s ease;
       background-image: linear-gradient(to right, #2b5876 0%, #4e4376 100%);
@@ -80,28 +81,40 @@
       .aplayer-info {
         background-image: linear-gradient(to right, #2b5876 0%, #4e4376 100%);
         border: none;
+        width: calc(100% - 47px);
+        box-shadow: 0 0 10px #ccc inset;
       }
 
       .aplayer-miniswitcher {
-        visibility: visible;
-        background-image: linear-gradient(
-          to bottom,
-          #3f51b1 0%,
-          #5a55ae 13%,
-          #7b5fac 25%,
-          #8f6aae 38%,
-          #a86aa4 50%,
-          #cc6b8e 62%,
-          #f18271 75%,
-          #f3a469 87%,
-          #f7c978 100%
-        );
-        box-shadow: 0 0 5px #ccc inset;
+        // visibility: visible;
+        display: none;
+        // background-image: linear-gradient(
+        //   225deg,
+        //   #3f51b1 0%,
+        //   #5a55ae 13%,
+        //   #7b5fac 25%,
+        //   #8f6aae 38%,
+        //   #a86aa4 50%,
+        //   #cc6b8e 62%,
+        //   #f18271 75%,
+        //   #f3a469 87%,
+        //   #f7c978 100%
+        // );
+        // background-image: linear-gradient(to bottom, #2b5876 0%, #4e4376 100%);
+        // box-shadow: 0 0 5px #ccc inset;
+        // width: 8px;
+        // transition: all 0.3s ease;
+
+        // &:hover {
+        //   width: 18px;
+        //   transform: translateX(10px);
+        //   transition: all 0.3s ease;
+        // }
       }
 
       .aplayer-pic {
         // border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        // border-bottom-left-radius: 10px;
         visibility: hidden;
         transition: all 0.3s ease;
         box-shadow: 0 0 10px #fff inset;
@@ -127,7 +140,8 @@
     background: transparent;
 
     .aplayer-miniswitcher {
-      border-top-right-radius: 10px;
+      border-radius: 0;
+      // border-top-right-radius: 10px;
       // border-bottom-right-radius: 10px;
     }
   }

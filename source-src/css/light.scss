@@ -90,6 +90,41 @@
     }
   }
 
+  .toc-container.tooltip-left .tooltip-east .tooltip-content {
+    background-image: linear-gradient(
+      to bottom,
+      #fff1eb 0%,
+      #ace0f9 100%
+    ) !important;
+
+    a {
+      color: #333;
+    }
+  }
+
+  .tooltip-content::after {
+    width: 2em;
+    height: 2em;
+    top: 50%;
+    margin: -1em 0 0;
+    background: url(./img/tooltipLight.svg) no-repeat center center;
+    background-size: 100%;
+  }
+
+  .toc-container.tooltip-left
+    .tooltip-east
+    .tooltip-content
+    .toc-article
+    li
+    a:hover {
+    color: #4facfe;
+    background-color: #d7fffe;
+
+    .toc-text {
+      background-color: #d7fffe;
+    }
+  }
+
   .mid-col {
     .main {
       background-color: #fff !important;

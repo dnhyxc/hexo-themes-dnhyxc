@@ -40,7 +40,7 @@ homeIcon.onmouseover = function (e) {
 	aplayer.style.opacity = 0;
 	aplayer.style.transition = 'all 0.3s ease';
 }
-leftCol.onclick = function () {
+leftCol.onclick = function (e) {
 	tipsBox.classList.remove("tip-show");
 	aplayer.style.opacity = 1;
 	aplayer.style.transition = 'all 0.3s ease';

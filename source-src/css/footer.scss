@@ -2,10 +2,8 @@
   font-size: 12px;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New",
     monospace;
-  text-shadow: 0 1px #fff;
   position: absolute;
   bottom: 10px;
-  opacity: 0.6;
   margin: 0 10px;
   width: calc(100% - 20px);
   text-align: center;
@@ -17,7 +15,6 @@
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     box-shadow: inset 0 -2px 8px #ccc;
-    // box-shadow: 0 -5px 10px #ccc inset;
 
     #footer-info {
       width: 100%;

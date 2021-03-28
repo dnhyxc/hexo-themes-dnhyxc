@@ -594,13 +594,13 @@ body,
       li {
         padding: 3px 0 3px 3px;
         a {
-          background-color: #343434;
+          // background-color: #343434;
           box-shadow: 0 0 3px #555 inset;
           border-radius: 5px;
           color: #fff;
           &.active {
             color: #ffd900;
-            background-color: #666;
+            background-color: rgba(225, 225, 225, 0.1);
             border-radius: 5px;
           }
         }
@@ -641,7 +641,7 @@ body,
     justify-content: space-around;
     position: relative;
     z-index: 1;
-    background-color: #292929;
+    // background-color: #292929;
     box-shadow: 0 0 6px #ccc inset;
     border-radius: 5px;
   }

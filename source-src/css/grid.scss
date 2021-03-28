@@ -21,6 +21,15 @@ body,
   overflow-x: hidden;
   // overflow-y: auto;
   background: #292929;
+  // background-image: linear-gradient(to top, #29323c 0%, #485563 100%);
+  // background-image: linear-gradient(to bottom, #2b5876 0%, #4e4376 100%);
+  // background-image: linear-gradient(
+  //   to top,
+  //   #1e3c72 0%,
+  //   #1e3c72 1%,
+  //   #2a5298 100%
+  // );
+  // background-image: linear-gradient(-45deg, #2b5876 0%, #4e4376 100%);
   overflow-y: hidden;
   -moz-user-select: none;
   /*火狐*/
@@ -141,6 +150,7 @@ body,
   }
 
   .main {
+    position: relative;
     box-sizing: border-box;
     height: 50px;
     line-height: 50px;

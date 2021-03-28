@@ -1,6 +1,10 @@
 .lightBtnctn {
   background-color: transparent;
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background-image: linear-gradient(
+    to top,
+    #fff1eb 0%,
+    #ace0f9 100%
+  ) !important;
   box-shadow: 0 1px 6px #fff;
 }
 .lightIntrudeLess {

@@ -2,17 +2,14 @@
 
 <body class="bodyCover">
   <%- partial('_partial/cover') %>
-  <div id="container" q-class="show:isCtnShow">
+  <div id="container" q-class="show:isCtnShow" style="<%=theme.style && theme.style.slider%>">
+    <!-- <%- partial('_partial/boder.ejs') %> -->
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
-      <% if(theme.aplayer.enable) { %>
-      <link rel="stylesheet" href="/dist/APlayer.min.css">
-      <script type="text/javascript" src="/dist/APlayer.min.js"></script>
-      <script type="text/javascript" src="/dist/music.js"></script>
-      <% } %>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <!-- <%- partial('_partial/boeder-mid.ejs') %> -->
       <div class="main">loading...</div>
       <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
       <div id="wrapper" class="body-wrap">
