@@ -8,35 +8,6 @@ body,
 
 #mobile-nav {
   display: block;
-
-  /*
-  .dark {
-            display: inline-block;
-            border-radius: 35px;
-            width: 35px;
-            height: 100%;
-            background-image: linear-gradient(
-              to bottom,
-              #2b5876 0%,
-              #4e4376 100%
-            );
-            box-shadow: 0 0 5px #ccc inset;
-            font-size: 10px;
-            color: #ccc;
-            line-height: 36px;
-            cursor: pointer;
-          }
-
-          .light {
-            background-color: none;
-            color: #333;
-            background-image: linear-gradient(
-              to bottom,
-              #fff1eb 0%,
-              #ace0f9 100%
-            );
-          }
-  */
   .mobileToggleLight {
     position: fixed;
     bottom: 20px;
@@ -99,12 +70,6 @@ body,
   }
   .tooltip-content:after {
     content: none;
-    // width: 2em;
-    // height: 2em;
-    // top: 50%;
-    // margin: -1em 0 0;
-    // background: url(./img/tooltip_mb.svg) no-repeat center center;
-    // background-size: 100%;
   }
 }
 
@@ -125,12 +90,6 @@ body,
     left: initial;
     right: 0;
   }
-
-  // .toc-container.tooltip-left .tooltip-east .tooltip-content .toc-article {
-  //   max-height: 500px;
-  //   max-width: 200px;
-  //   overflow: auto;
-  // }
 
   .toc-container.tooltip-left {
     background-color: transparent;
@@ -153,6 +112,10 @@ body,
           overflow: auto;
 
           li {
+            a {
+              display: flex;
+              white-space: normal;
+            }
             a:hover {
               background-color: #2580b3;
             }
@@ -160,6 +123,8 @@ body,
 
           a:hover {
             .toc-text {
+              display: inline-block;
+              width: 100%;
               background-color: #2580b3;
             }
           }
