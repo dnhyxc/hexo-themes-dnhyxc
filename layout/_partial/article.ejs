@@ -6,7 +6,7 @@
   <% if (!post.noDate){ %>
   <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
   <!-- 文章字数统计 -->
-  <% if(theme.word_count && !post.no_word_count){%>
+  <% if(theme.word_count && !post.no_word_count && !index){%>
   <%- partial('post/word') %>
   <% } %>
   <!-- 以上就是文章字数统计的全部内容 -->

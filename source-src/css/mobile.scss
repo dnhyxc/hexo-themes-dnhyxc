@@ -282,6 +282,7 @@ body,
 }
 
 .article-header {
+  position: relative;
   border-left: none;
   padding: 0;
   border-bottom: 1px dotted #ddd;
@@ -296,21 +297,33 @@ body,
     width: 100%;
     padding-bottom: 0;
     font-size: 12px;
-    text-align: center;
+    padding-left: 1px;
+    display: block;
   }
 
   .time-count {
+    position: initial;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     right: 0;
     top: 9px;
     font-size: 12px;
+    padding-left: 1px;
+
+    time {
+      position: absolute;
+      right: 1px;
+      top: 9px;
+    }
   }
 
   .count {
-    margin-left: 10px;
     font-size: 12px;
+    position: absolute;
+    right: 1px;
+    bottom: 0px;
   }
 
   h1 {
