@@ -10,7 +10,7 @@ body,
   display: block;
   .mobileToggleLight {
     position: fixed;
-    bottom: 20px;
+    bottom: 65px;
     right: 20px;
     display: flex;
     justify-content: center;
@@ -19,6 +19,34 @@ body,
     height: 38px;
     z-index: 888;
     .mobileDark {
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 36px;
+      border-radius: 50px;
+      background-image: linear-gradient(to bottom, #2b5876 0%, #4e4376 100%);
+      box-shadow: 0 0 5px #ccc inset;
+      font-size: 10px;
+      color: #ccc;
+      visibility: hidden;
+    }
+    .mobileLight {
+      background-color: none;
+      color: #333;
+      background-image: linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
+    }
+  }
+  .toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    z-index: 888;
+    .toTopDark {
       width: 35px;
       height: 35px;
       text-align: center;
@@ -312,7 +340,7 @@ body,
   min-height: 40px;
   padding-top: 10px;
   margin: 0;
-  border-top: 5px solid #666;
+  border-top: 1px solid #666;
 }
 .article-info-post.article-info {
   margin: 0;
@@ -349,10 +377,24 @@ body,
     }
   }
   .article-entry {
+    h3 {
+      border-bottom: 1px solid #666;
+      padding-bottom: 5px;
+    }
+
+    h4 {
+      margin-bottom: 4px;
+      padding-bottom: 0;
+    }
     padding: 24px 0 0;
 
     .hbe-button {
       margin-top: 20px;
+    }
+  }
+  .article-inner {
+    .art-title {
+      margin-bottom: 6px;
     }
   }
   .article-inner h1.article-title,

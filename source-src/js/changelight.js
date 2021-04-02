@@ -6,6 +6,7 @@ function init() {
   const dark = document.querySelector('.dark');
   const toggleMusic = document.querySelector('.toggleMusic');
   const mobileDark = document.querySelector('.mobileDark');
+  const toTopDark = document.querySelector('.toTopDark');
 
   function toggleLight() {
     if (container.getAttribute('class') === 'container') {
@@ -59,6 +60,13 @@ function init() {
       mobileDark.innerHTML = '白天';
       sessionStorage.setItem('mobileLight', true);
     }
+    if (toTopDark.getAttribute('class').includes('mobileLight')) {
+      toTopDark.classList.remove('mobileLight');
+      sessionStorage.removeItem('mobileLight');
+    } else {
+      toTopDark.classList.add('mobileLight');
+      sessionStorage.setItem('mobileLight', true);
+    }
   }
   // PC端头像
   dark.onclick = function () {
@@ -80,9 +88,11 @@ function init() {
   }
   if (sessionStorage.getItem('mobileLight')) {
     mobileDark.classList.add('mobileLight')
+    toTopDark.classList.add('mobileLight')
     mobileDark.innerHTML = '白天';
   } else {
     mobileDark.classList.remove('mobileLight');
+    toTopDark.classList.remove('mobileLight');
     mobileDark.innerHTML = '黑夜';
   }
   if (sessionStorage.getItem('container')) {
@@ -110,11 +120,25 @@ function init() {
   document.body.onscroll = function () {
     mobileDark.style.visibility = 'visible';
     mobileDark.style.transition = 'all 0.5s';
+    toTopDark.style.visibility = 'visible';
+    toTopDark.style.transition = 'all 0.5s';
     clearTimeout(timer);
     timer = setTimeout(() => {
       mobileDark.style.visibility = 'hidden';
       mobileDark.style.transition = 'all 0.5s';
+      toTopDark.style.visibility = 'hidden';
+      toTopDark.style.transition = 'all 0.5s';
     }, 2000);
+  }
+
+  toTopDark.onclick = function () {
+    const clock = setInterval(function () {
+      if (document.documentElement.scrollTop !== 0) {
+        document.documentElement.scrollTop -= Math.fround(document.documentElement.scrollTop / 10);
+      } else {
+        clearInterval(clock);
+      }
+    }, 10);
   }
 }
 

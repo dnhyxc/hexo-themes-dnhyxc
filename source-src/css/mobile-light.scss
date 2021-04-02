@@ -67,6 +67,21 @@
     background-color: #d7fffe;
   }
 
+  .article-header {
+    border-bottom: 1px dotted #666 !important;
+  }
+
+  .article {
+    .article-entry {
+      h3 {
+        border-bottom: 1px solid #ccc !important;
+      }
+    }
+    .article-info {
+      border-top: 1px solid #ccc !important;
+    }
+  }
+
   .tooltip-content:after {
     content: none;
   }
