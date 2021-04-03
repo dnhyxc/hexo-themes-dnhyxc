@@ -11,6 +11,8 @@ import Aside from './aside'
 
 import ChangeLight from './changelight'
 
+import Setmargin from './setmargin'
+
 import { addLoadEvent } from './util'
 
 const cover = document.querySelector('.cover');
@@ -20,6 +22,7 @@ addLoadEvent(function () {
 	// Share.init()
 	Viewer.init()
 	Aside.init()
+	Setmargin.init();
 })
 
 function stopTouchmove(e) {

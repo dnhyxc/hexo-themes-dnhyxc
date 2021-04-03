@@ -187,104 +187,6 @@
   margin: -30px 0 20px $articlePadding;
 }
 
-#gitalk-container {
-  padding: 0 20px;
-
-  .gt-container {
-    background-color: #333;
-    padding: 0 5px 15px 5px;
-
-    .gt-btn-preview {
-      background-color: #6190e8;
-    }
-
-    .gt-copyright {
-      border-top: none;
-    }
-
-    .gt-user {
-      box-shadow: 0 0 5px #222;
-      background-color: #333333;
-      padding: 0px 3px;
-      border-radius: 5px;
-      font-size: 16px;
-
-      .gt-ico {
-        margin: 0 0;
-        display: none;
-      }
-    }
-
-    .gt-popup {
-      top: 3.375em;
-      background: #666;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .gt-btn {
-      box-shadow: 0 0 5px #ccc inset;
-      border: 1px solid #666;
-      color: #fff;
-    }
-
-    .gt-btn:hover {
-      background-color: #f5edc6;
-      color: #222;
-    }
-
-    .gt-meta {
-      margin: 0 0 1.25em;
-      border-bottom: 1px solid #666;
-      z-index: 5;
-    }
-
-    .gt-header-textarea {
-      background-color: #292929;
-    }
-
-    .gt-header-preview {
-      background-color: #292929;
-
-      p {
-        color: #ccc;
-        font-size: 14px;
-      }
-    }
-
-    .gt-comment-content:hover {
-      box-shadow: 0 0 8px #ccc inset;
-    }
-
-    .gt-comment-admin .gt-comment-content {
-      background-color: #292929;
-    }
-
-    .gt-comment-body p {
-      color: #ccc !important;
-      font-size: 14px;
-    }
-
-    .markdown-body blockquote {
-      border-left: 2px solid #666;
-    }
-
-    .markdown-body h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: #ccc;
-    }
-
-    .markdown-body h1,
-    h2 {
-      border-bottom: 2px solid #666;
-    }
-  }
-}
-
 // 设置分类页面样式
 .category-count {
   text-align: center;
@@ -294,7 +196,10 @@
 }
 .category-list {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .category-list li.category-list-item:hover {
   background-color: #888;
@@ -304,7 +209,10 @@
 }
 .tag-cloud {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .tag-cloud a {
   margin: 0 20px;
@@ -382,11 +290,11 @@
 /* 分类 */
 .category-list {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 
   li.category-list-item {
     display: inline-block;
-    margin: 0 1em 0.5em 0;
+    margin: 0 0 15px 0;
     padding: 0 5px;
     box-shadow: 0 0 5px #888;
     font-size: 1.2rem;
@@ -461,7 +369,7 @@
 /* 标签 */
 .tag-cloud {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 .tag-cloud a {
   margin: 0 20px;

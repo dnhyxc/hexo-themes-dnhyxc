@@ -5,6 +5,9 @@ body,
   overflow-x: hidden;
   overflow-y: auto;
 }
+#container {
+  width: 100%;
+}
 
 #mobile-nav {
   display: block;
@@ -695,8 +698,7 @@ body,
   margin-bottom: 18px;
 
   .gt-container {
-    background-color: #333;
-    padding: 0 3px;
+    padding: 0 8px;
 
     .gt-meta {
       margin: 6px 0 1.25em;
@@ -708,17 +710,6 @@ body,
       & :last-child {
         margin-left: 5px;
       }
-    }
-
-    .gt-btn-preview {
-      background-color: #343434;
-    }
-
-    .gt-btn {
-      box-shadow: 0 0 6px #666 inset;
-      border: 1px solid #666;
-      color: #6190e8;
-      background-color: #343434;
     }
   }
 }
