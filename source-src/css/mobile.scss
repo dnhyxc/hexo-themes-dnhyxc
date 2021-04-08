@@ -275,6 +275,12 @@ body,
   color: #fff;
   font-weight: 700;
   line-height: 57px;
+  display: inline-block;
+  width: 280px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
 }
 
 .article-header {
