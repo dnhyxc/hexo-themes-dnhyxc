@@ -1,6 +1,7 @@
 .article-inner {
   p {
-    margin: 0 0 1.1em;
+    // margin: 0 0 1.1em;
+    text-align: justify;
     word-wrap: break-word;
   }
 }
@@ -88,6 +89,7 @@
   }
   ul li {
     font-size: 16px;
+    text-align: justify;
   }
   p code,
   li code {
@@ -167,7 +169,7 @@
   h4,
   h5,
   h6 {
-    margin-top: 22px;
+    margin-top: 18px;
     font-weight: bold;
     color: #ffec8b;
     padding-bottom: 4px;

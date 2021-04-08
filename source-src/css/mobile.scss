@@ -386,6 +386,8 @@ body,
     }
   }
   .article-entry {
+    padding: 0 0;
+
     h3 {
       border-bottom: 1px solid #888;
       padding-bottom: 5px;
@@ -395,7 +397,6 @@ body,
       margin-bottom: 4px;
       padding-bottom: 0;
     }
-    padding: 24px 0 0;
 
     .hbe-button {
       margin-top: 20px;
