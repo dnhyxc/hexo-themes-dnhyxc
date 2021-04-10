@@ -120,9 +120,9 @@
       content: "";
       width: 6px;
       height: 6px;
-      border: 1px solid #999;
+      border: 1px solid #ccc;
       border-radius: 10px;
-      background: #aaa;
+      background: #ccc;
       display: inline-block;
       margin-right: 10px;
       float: left;
@@ -145,10 +145,10 @@
   li {
     ul,
     ol {
-      margin-left: 30px;
+      margin-left: 20px;
       li:before {
         content: "";
-        background: #dedede;
+        background: #ccc;
       }
     }
   }
