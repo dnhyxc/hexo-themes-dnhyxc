@@ -22,7 +22,7 @@
     width: 76%;
     height: calc(100% - 112px);
     text-align: center;
-    margin: 112px auto 0;
+    margin: 108px auto 0;
 
     #header {
       width: 100%;
@@ -38,7 +38,7 @@
           width: 100%;
           height: 35px;
           text-align: center;
-          margin-bottom: 10px;
+          margin-bottom: 13px;
 
           .dark,
           .toggleMusic {
@@ -138,7 +138,7 @@
           }
 
           .tips-text {
-            width: 60%;
+            width: 55%;
             height: 0px;
             line-height: 30px;
             cursor: pointer;
@@ -259,10 +259,11 @@
         text-transform: uppercase;
 
         .menu-text {
-          width: 60%;
+          width: 55%;
           margin-bottom: 10px;
           border-radius: 8px;
-          box-shadow: 0px 0px 6px #ccc inset;
+          box-shadow: 0px 0px 5px #ccc inset;
+          // box-shadow: 0 3px 0px #817b95 inset;
 
           a {
             display: inline-block;

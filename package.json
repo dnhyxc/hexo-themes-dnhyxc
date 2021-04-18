@@ -1,5 +1,5 @@
 {
-  "name": "yilia",
+  "name": "dnhyxc",
   "version": "4.0.0",
   "description": "a theme for hexo",
   "scripts": {
@@ -16,7 +16,7 @@
     "theme",
     "blog"
   ],
-  "author": "litten",
+  "author": "dnhyxc",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/litten/hexo-theme-yilia/issues"
