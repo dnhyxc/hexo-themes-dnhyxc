@@ -38,7 +38,7 @@
 .article-inner h4,
 .article-inner h5,
 .article-inner h6 {
-  font-size: 16px;
+  // font-size: 16px;
   font-size: 1rem;
   line-height: 1.3125;
   margin-top: 3.5em;
@@ -46,6 +46,7 @@
 }
 
 .article-inner h4 {
+  font-size: 18px;
   letter-spacing: 0.140625em;
   // text-transform: uppercase;
 }
@@ -173,6 +174,9 @@
     font-weight: bold;
     color: #ffec8b;
     padding-bottom: 4px;
+  }
+  h5 {
+    color: #dbff6e;
   }
   video {
     max-width: 100%;
