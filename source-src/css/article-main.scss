@@ -2,6 +2,20 @@
   position: relative;
 }
 
+.article {
+  .browserCover {
+    width: 100%;
+    height: calc(100vh - 401px);
+  }
+}
+
+// .body-wrap {
+//   & .article:first-child {
+//     height: calc(100vh - 178px);
+//     overflow: hidden;
+//   }
+// }
+
 @-webkit-keyframes cd-bounce-1 {
   0% {
     opacity: 0;
