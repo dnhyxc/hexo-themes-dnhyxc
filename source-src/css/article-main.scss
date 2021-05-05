@@ -5,9 +5,18 @@
 .article {
   .browserCover {
     width: 100%;
-    height: calc(100vh - 343px);
+    height: calc(100vh - 373px);
+    // padding-top: 18px;
+  }
+
+  .coverInfo {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .coverInfoTop {
     border-top: 1px solid #999;
-    padding-top: 16px;
   }
 }
 
@@ -99,7 +108,7 @@
   position: relative;
   box-sizing: border-box;
   border-left: 8px solid rgb(255, 217, 0);
-  padding: 28px 0px 5px 10px;
+  padding: 22px 0px 0px 10px;
   padding-left: calc(7.6923% - 8px);
   border-top-left-radius: 5px;
   display: flex;
@@ -156,7 +165,7 @@
 .article-more-link {
   position: absolute;
   right: 0;
-  bottom: 25px;
+  bottom: 20px;
   text-align: left;
   float: right;
   border-radius: 10px;
@@ -187,8 +196,8 @@
 }
 .article-info-index.article-info {
   position: relative;
-  padding-top: 6px;
-  margin: 16px $articlePadding 10px $articlePadding;
+  padding-top: 11px;
+  margin: 0px $articlePadding 10px $articlePadding;
   min-height: 58px;
   border-top: 1px solid #999;
   padding-right: 90px;

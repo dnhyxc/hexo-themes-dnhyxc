@@ -20,6 +20,8 @@ let wrapper = document.querySelector('#wrapper');
 let main = document.querySelector('.main');
 let scrollTop = document.querySelector('#scrollTop');
 let bodyScroll = document.body;
+let coverInfo = document.querySelectorAll('.coverInfo');
+let coverInfoTop = document.querySelector('.coverInfoTop');
 
 const aplayer = document.querySelector('.aplayer');
 
@@ -120,6 +122,8 @@ if (decodeURIComponent(path)) {
 		} else {
 			main.innerHTML = 'Article-' + subPath[0].toUpperCase() + subPath.slice(1);
 		}
+		coverInfo[0].style.display = 'none';
+		coverInfo[1].style.display = 'none';
 	} else {
 		main.innerHTML = 'HOME'
 	}
