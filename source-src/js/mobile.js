@@ -9,6 +9,8 @@ import Fix from './fix'
 import { addLoadEvent } from './util'
 
 const tocArticle = document.querySelector('.toc-article');
+let coverInfo = document.querySelectorAll('.coverInfo');
+let coverInfoTop = document.querySelector('.coverInfoTop');
 
 let initialClientY;
 
@@ -40,6 +42,10 @@ if (decodeURIComponent(path)) {
 			btnctnname.innerHTML = 'Informal Essay';
 		} else {
 			btnctnname.innerHTML = 'Article-' + subPath[0].toUpperCase() + subPath.slice(1);
+		}
+		if (document.body.clientWidth >= 800) {
+			coverInfo[0].style.display = 'none';
+			coverInfo[1].style.display = 'none';
 		}
 	} else {
 		btnctnname.innerHTML = 'HOME'

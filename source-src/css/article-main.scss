@@ -2,11 +2,23 @@
   position: relative;
 }
 
+@media screen and (max-width: 800px) {
+  .browserCover {
+    padding-bottom: 12px;
+  }
+  .coverInfo {
+    display: none;
+  }
+
+  .coverInfoTop {
+    display: none;
+  }
+}
+
 .article {
   .browserCover {
     width: 100%;
     height: calc(100vh - 373px);
-    // padding-top: 18px;
   }
 
   .coverInfo {
