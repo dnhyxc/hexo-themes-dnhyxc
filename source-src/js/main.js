@@ -16,7 +16,6 @@ import Setmargin from './setmargin'
 import { addLoadEvent } from './util'
 
 const cover = document.querySelector('.cover');
-const hideCoverBtn = document.querySelector('.hideCoverBtn');
 
 addLoadEvent(function () {
 	// Share.init()
@@ -39,11 +38,6 @@ document.onreadystatechange = function () {
 			document.body.removeEventListener('touchmove', stopTouchmove, { passive: false });
 		}
 	} else {
-		hideCoverBtn.addEventListener('click', function () {
-			setTimeout(() => {
-				cover.classList.add('hideCover');
-			}, 1000)
-		})
 		document.body.addEventListener('touchmove', stopTouchmove, { passive: false });
 	}
 }
