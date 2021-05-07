@@ -43,7 +43,7 @@ if (decodeURIComponent(path)) {
 		} else {
 			btnctnname.innerHTML = 'Article-' + subPath[0].toUpperCase() + subPath.slice(1);
 		}
-		if (document.body.clientWidth >= 800) {
+		if (document.body.clientWidth >= 800 && coverInfo && coverInfo.length > 0) {
 			coverInfo[0].style.display = 'none';
 			coverInfo[1].style.display = 'none';
 		}

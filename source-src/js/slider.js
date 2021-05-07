@@ -122,8 +122,10 @@ if (decodeURIComponent(path)) {
 		} else {
 			main.innerHTML = 'Article-' + subPath[0].toUpperCase() + subPath.slice(1);
 		}
-		coverInfo[0].style.display = 'none';
-		coverInfo[1].style.display = 'none';
+		if (coverInfo && coverInfo.length > 0) {
+			coverInfo[0].style.display = 'none';
+			coverInfo[1].style.display = 'none';
+		}
 	} else {
 		main.innerHTML = 'HOME'
 	}
