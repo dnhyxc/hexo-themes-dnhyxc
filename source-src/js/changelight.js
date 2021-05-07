@@ -7,13 +7,6 @@ function init() {
   const toggleMusic = document.querySelector('.toggleMusic');
   const mobileDark = document.querySelector('.mobileDark');
   const toTopDark = document.querySelector('.toTopDark');
-  const hideCoverBtn = document.querySelector('.hideCoverBtn');
-
-  hideCoverBtn.addEventListener('click', function () {
-    setTimeout(() => {
-      cover.classList.add('hideCover');
-    }, 1000)
-  })
 
   function toggleLight() {
     if (container.getAttribute('class') === 'container') {
