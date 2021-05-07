@@ -19,9 +19,10 @@ const cover = document.querySelector('.cover');
 
 addLoadEvent(function () {
 	// Share.init()
-	Viewer.init()
-	Aside.init()
+	Viewer.init();
+	Aside.init();
 	Setmargin.init();
+	ChangeLight.init();
 })
 
 function stopTouchmove(e) {
@@ -30,7 +31,7 @@ function stopTouchmove(e) {
 
 document.onreadystatechange = function () {
 	if (document.readyState === "complete") {
-		ChangeLight.init()
+		// ChangeLight.init()
 		cover.classList.add('hideCover');
 		if (document.body.clientWidth <= 800) {
 			document.body.style.position = 'relative';
