@@ -21,7 +21,7 @@ let main = document.querySelector('.main');
 let scrollTop = document.querySelector('#scrollTop');
 let bodyScroll = document.body;
 let coverInfo = document.querySelectorAll('.coverInfo');
-let coverInfoTop = document.querySelector('.coverInfoTop');
+let browserCover = document.querySelector('.browserCover');
 
 const aplayer = document.querySelector('.aplayer');
 
@@ -125,6 +125,10 @@ if (decodeURIComponent(path)) {
 		if (coverInfo && coverInfo.length > 0) {
 			coverInfo[0].style.display = 'none';
 			coverInfo[1].style.display = 'none';
+		}
+		if (bodyScroll.clientWidth <= 800) {
+			browserCover.style.paddingBottom = '0px';
+			browserCover.style.paddingTop = '6px';
 		}
 	} else {
 		main.innerHTML = 'HOME'
