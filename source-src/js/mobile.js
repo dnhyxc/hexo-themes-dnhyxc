@@ -9,8 +9,9 @@ import Fix from './fix'
 import { addLoadEvent } from './util'
 
 const tocArticle = document.querySelector('.toc-article');
+const btnctnname = document.querySelector('.btnctn-name');
 let coverInfo = document.querySelectorAll('.coverInfo');
-let coverInfoTop = document.querySelector('.coverInfoTop');
+// let browserCover = document.querySelector('.browserCover');
 
 let initialClientY;
 
@@ -30,8 +31,6 @@ tocArticle && tocArticle.addEventListener('touchmove', function (event) {
 	return true
 })
 
-const btnctnname = document.querySelector('.btnctn-name');
-
 let path = location.pathname;
 if (decodeURIComponent(path)) {
 	btnctnname.innerHTML = 'Informal Essay';
@@ -47,6 +46,10 @@ if (decodeURIComponent(path)) {
 			coverInfo[0].style.display = 'none';
 			coverInfo[1].style.display = 'none';
 		}
+		// if (document.body.clientWidth <= 800) {
+		// 	browserCover.style.paddingBottom = '0px';
+		// 	browserCover.style.paddingTop = '6px';
+		// }
 	} else {
 		btnctnname.innerHTML = 'HOME'
 	}
